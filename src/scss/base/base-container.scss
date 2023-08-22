@@ -1,0 +1,12 @@
+.base-container {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+@media(min-width: '1300px') {
+  .base-container {
+    width: 100%;
+    max-width: 1296px;
+  }
+}
