@@ -1,61 +1,61 @@
 import Swiper from 'swiper/bundle';
 
-// ? Слайдер с отзывами
-let reviews_slider = new Swiper(".reviews__slider", {
+// ! --- Слайдер в хедере
+let heading_slider = new Swiper(".heading__slider", {
   direction: "horizontal",
-  spaceBetween: 30,
-  // initialSlide: 1,
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
+  slidesPerView: 1,
 
   pagination: {
-    el: ".reviews__slider-pagination",
+    el: ".heading__slider-pagination",
     clickable: true,
   },
 });
 
-// ? Слайдер с этапами
-var mobile_slider_init = false;
+// ! --- Слайдер первого каталога на главной
+var index_catalogue_slider_init = false;
 
-function mobile_slider() {
+function index_catalogue_slider() {
   if (window.innerWidth <= 1024) {
-    if (!mobile_slider_init) {
-      mobile_slider_init = true;
+    if (!index_catalogue_slider_init) {
+      index_catalogue_slider_init = true;
 
-      var mobile_slider = new Swiper(".mobile-slider-class", {
+      var index_catalogue_slider = new Swiper(".index-catalogue__slider", {
         direction: "horizontal",
-        spaceBetween: 25,
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1
-          },
-          768: {
-            slidesPerView: "auto"
-          },
-        },
+        spaceBetween: 15,
+        slidesPerView: "auto",
 
         pagination: {
-          el: ".mobile-slider-class__pagination",
+          el: ".index-catalogue__slider-pagination",
+          type: "progressbar",
           clickable: true,
         },
 
       });
     }
-  } else if (mobile_slider_init) {
-    mobile_slider.destroy();
-    mobile_slider_init = false;
+  } else if (index_catalogue_slider_init) {
+    index_catalogue_slider.destroy();
+    index_catalogue_slider_init = false;
   }
 }
-mobile_slider();
-window.addEventListener("resize", mobile_slider);
+index_catalogue_slider();
+window.addEventListener("resize", index_catalogue_slider);
+
+// ! --- Слайдер второго каталога на главной
+let index_catalogue_slider_second = new Swiper(".index-catalogue-goods__slider", {
+  direction: "horizontal",
+  slidesPerView: 5,
+  spaceBetween: 48,
+
+  navigation: {
+    nextEl: '.index-catalogue-goods__nav-arrow--next',
+    prevEl: '.index-catalogue-goods__nav-arrow--prev',
+  },
+
+  pagination: {
+    el: ".index-catalogue-goods__slider-pagination",
+    clickable: true,
+  },
+});
 
 
 // ? Мобильный слайдер

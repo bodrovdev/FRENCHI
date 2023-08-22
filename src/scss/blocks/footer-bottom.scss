@@ -1,0 +1,11 @@
+@use "../mixins";
+
+.footer-bottom {
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+
+}

@@ -1,0 +1,97 @@
+@use "../mixins";
+
+.index-catalogue {
+  margin: 80px 0 0 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  &__slider {
+    &-wrapper {
+      @include mixins.respond-to(desktopS) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 80px 60px;
+      }
+    }
+
+    &-slide {
+      @include mixins.respond-to(desktopS) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        width: 220px;
+      }
+    }
+  }
+
+  &__slide {
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      background: url('../img/image/catalogue-item-bg.jpg');
+      background-size: 220px 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      text-align: center;
+    }
+
+    &-title {
+      color: #000;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &-text {
+      color: #000;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-link {
+      color: #777;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+
+      transition: color 0.2s, transform 0.2s;
+
+      &:hover {
+        color: #3D7829;
+
+        transform: scale(1.1);
+        transition: color 0.2s, transform 0.2s;
+      }
+    }
+  }
+}

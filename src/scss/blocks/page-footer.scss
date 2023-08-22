@@ -1,5 +1,11 @@
 @use "../mixins";
 
 .page-footer {
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
+
+  background-color: var(--color-black);
+
+  padding: 31px 0 46px 0;
 }
