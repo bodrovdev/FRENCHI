@@ -30,27 +30,65 @@
         <div class="main-nav__mobile-menu" id="mobile_menu">
           <ul class="main-nav__mobile-menu-list base-list">
 
-            <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link base-link" href="#" id="catalogue_link">
-                <span>Каталог</span>
-                <div class="main-nav__catalogue">
-                  <div class="main-nav__catalogue-container base-container">
-                    <div class="main-nav__catalogue-item">
-                      <span class="main-nav__catalogue-item-label"></span>
-                      <ul class="main-nav__catalogue-item-list base-list"></ul>
-                    </div>
+            <li class="main-nav__mobile-menu-item" id="catalogue_link">
+              <a class="main-nav__mobile-menu-link base-link" href="#">
+                Каталог
+              </a>
+              <div class="main-nav__catalogue">
+                <div class="main-nav__catalogue-container base-container">
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <script>
-                  let catalogue = document.querySelector('.main-nav__catalogue');
-                  let main_nav = document.querySelector('.main-nav');
-                  function setCatalogueWith() {
-                    catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
-                  }
-                  document.addEventListener('load', setCatalogueWith());
-                  document.addEventListener('resize', setCatalogueWith());
-                </script>
-              </a>
+              </div>
+              <script>
+                let catalogue = document.querySelector('.main-nav__catalogue');
+                let main_nav = document.querySelector('.main-nav');
+                function setCatalogueWith() {
+                  catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
+                }
+                document.addEventListener('load', setCatalogueWith());
+                document.addEventListener('resize', setCatalogueWith());
+              </script>
             </li>
 
             <li class="main-nav__mobile-menu-item">
