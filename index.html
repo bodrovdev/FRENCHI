@@ -18,6 +18,7 @@
 
   <header class="page-header">
     <nav class="main-nav">
+
       <div class="main-nav__container base-container">
 
         <a class="main-nav__logo-link base-link" href="index.html">
@@ -28,9 +29,30 @@
 
         <div class="main-nav__mobile-menu" id="mobile_menu">
           <ul class="main-nav__mobile-menu-list base-list">
+
             <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link base-link" href="#">Каталог</a>
+              <a class="main-nav__mobile-menu-link base-link" href="#" id="catalogue_link">
+                <span>Каталог</span>
+                <div class="main-nav__catalogue">
+                  <div class="main-nav__catalogue-container base-container">
+                    <div class="main-nav__catalogue-item">
+                      <span class="main-nav__catalogue-item-label"></span>
+                      <ul class="main-nav__catalogue-item-list base-list"></ul>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  let catalogue = document.querySelector('.main-nav__catalogue');
+                  let main_nav = document.querySelector('.main-nav');
+                  function setCatalogueWith() {
+                    catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
+                  }
+                  document.addEventListener('load', setCatalogueWith());
+                  document.addEventListener('resize', setCatalogueWith());
+                </script>
+              </a>
             </li>
+
             <li class="main-nav__mobile-menu-item">
               <a class="main-nav__mobile-menu-link base-link" href="#">Новости</a>
             </li>
@@ -387,15 +409,34 @@
       </div>
 
       <div class="footer-top__right-column">
+        <dib class="footer-top__right-column-links"></dib>
         <a class="footer-top__right-column-link base-link" href="tel:+74952151067">+7 (495) 215 10 67</a>
         <a class="footer-top__right-column-link base-link" href="mailto:frenchi@frenchi.ru">frenchi@frenchi.ru</a>
+
+        <div class="footer-bottom__socials footer-bottom__socials--mobile">
+          <a class="footer-bottom__socials-link base-link" href="#">
+            <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
+              <use href="img/icon/sprite.svg#socials-1-icon"></use>
+            </svg>
+          </a>
+          <a class="footer-bottom__socials-link base-link" href="#">
+            <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
+              <use href="img/icon/sprite.svg#socials-2-icon"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="footer-bottom">
     <div class="footer-bottom__container base-container">
-      <span class="footer-bottom__copyright">Copyright © 2001—2023 FRENCHI. All rights reserved.</span>
+      <span class="footer-bottom__copyright">Copyright © 2001—<span></span> FRENCHI. All rights reserved.</span>
+
+      <script>
+        document.querySelector('.footer-bottom__copyright span').textContent = new Date().getFullYear();
+      </script>
+
       <div class="footer-bottom__socials">
         <a class="footer-bottom__socials-link base-link" href="#">
           <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
