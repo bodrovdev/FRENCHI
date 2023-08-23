@@ -30,27 +30,65 @@
         <div class="main-nav__mobile-menu" id="mobile_menu">
           <ul class="main-nav__mobile-menu-list base-list">
 
-            <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link base-link" href="#" id="catalogue_link">
-                <span>Каталог</span>
-                <div class="main-nav__catalogue">
-                  <div class="main-nav__catalogue-container base-container">
-                    <div class="main-nav__catalogue-item">
-                      <span class="main-nav__catalogue-item-label"></span>
-                      <ul class="main-nav__catalogue-item-list base-list"></ul>
-                    </div>
+            <li class="main-nav__mobile-menu-item" id="catalogue_link">
+              <a class="main-nav__mobile-menu-link base-link" href="#">
+                Каталог
+              </a>
+              <div class="main-nav__catalogue">
+                <div class="main-nav__catalogue-container base-container">
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main-nav__catalogue-partial">
+                    <span class="main-nav__catalogue-list-caption">Покрытия</span>
+                    <ul class="main-nav__catalogue-list base-list">
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Базовые покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Финишные покрытия</a>
+                      </li>
+                      <li class="main-nav__catalogue-list-item">
+                        <a class="main-nav__catalogue-list-link base-link" href="#">Цветные покрытия</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <script>
-                  let catalogue = document.querySelector('.main-nav__catalogue');
-                  let main_nav = document.querySelector('.main-nav');
-                  function setCatalogueWith() {
-                    catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
-                  }
-                  document.addEventListener('load', setCatalogueWith());
-                  document.addEventListener('resize', setCatalogueWith());
-                </script>
-              </a>
+              </div>
+              <script>
+                let catalogue = document.querySelector('.main-nav__catalogue');
+                let main_nav = document.querySelector('.main-nav');
+                function setCatalogueWith() {
+                  catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
+                }
+                document.addEventListener('load', setCatalogueWith());
+                document.addEventListener('resize', setCatalogueWith());
+              </script>
             </li>
 
             <li class="main-nav__mobile-menu-item">
@@ -316,7 +354,7 @@
         <button class="index-catalogue-goods__tabs-button base-button" data-tab="4">Умная эмаль</button>
       </div>
       <div class="index-catalogue-goods__tabs-body">
-        <div class="index-catalogue-goods__slider index-catalogue-goods__slider--active swiper" data-tab="1">
+        <div class="index-catalogue-goods__slider index-catalogue-goods__slider--1 index-catalogue-goods__slider--active swiper" data-tab="1">
           <div class="index-catalogue-goods__slider-wrapper swiper-wrapper">
             <div class="index-catalogue-goods__slider-slide swiper-slide">
               <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
@@ -363,9 +401,150 @@
           </div>
           <div class="index-catalogue-goods__slider-pagination swiper-pagination"></div>
         </div>
-        <div class="index-catalogue-goods__slider swiper" data-tab="2">2</div>
-        <div class="index-catalogue-goods__slider swiper" data-tab="3">3</div>
-        <div class="index-catalogue-goods__slider swiper" data-tab="4">4</div>
+        <div class="index-catalogue-goods__slider index-catalogue-goods__slider--2 swiper" data-tab="2">
+          2
+          <div class="index-catalogue-goods__slider-wrapper swiper-wrapper">
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="index-catalogue-goods__slider-nav">
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--prev base-button">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--next base-button" style="transform:scaleX(-1);">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="index-catalogue-goods__slider-pagination swiper-pagination"></div>
+        </div>
+        <div class="index-catalogue-goods__slider index-catalogue-goods__slider--3 swiper" data-tab="3">
+          3
+          <div class="index-catalogue-goods__slider-wrapper swiper-wrapper">
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="index-catalogue-goods__slider-nav">
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--prev base-button">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--next base-button" style="transform:scaleX(-1);">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="index-catalogue-goods__slider-pagination swiper-pagination"></div>
+        </div>
+        <div class="index-catalogue-goods__slider index-catalogue-goods__slider--4 swiper" data-tab="4">
+          4
+          <div class="index-catalogue-goods__slider-wrapper swiper-wrapper">
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+            <div class="index-catalogue-goods__slider-slide swiper-slide">
+              <img class="index-catalogue-goods__slide-img" src="img/image/catalogue-second-item.png" src="#" alt="#">
+              <h3 class="index-catalogue-goods__slide-title base-title">Комплекс для снятия лака и укрепления ногтей</h3>
+              <a class="index-catalogue-goods__slide-link base-link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="index-catalogue-goods__slider-nav">
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--prev base-button">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+            <button class="index-catalogue-goods__nav-arrow index-catalogue-goods__nav-arrow--next base-button" style="transform:scaleX(-1);">
+              <svg class="index-catalogue-goods__nav-arrow-icon" width="18" height="36" aria-hidden="true">
+                <use href="img/icon/sprite.svg#slider-arrow-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="index-catalogue-goods__slider-pagination swiper-pagination"></div>
+        </div>
       </div>
       <a class="index-catalogue-goods__link page-link base-link" href="#">Перейти в каталог</a>
     </div>
