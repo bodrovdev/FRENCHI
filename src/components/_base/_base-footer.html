@@ -16,15 +16,34 @@
       </div>
 
       <div class="footer-top__right-column">
+        <dib class="footer-top__right-column-links"></dib>
         <a class="footer-top__right-column-link base-link" href="tel:+74952151067">+7 (495) 215 10 67</a>
         <a class="footer-top__right-column-link base-link" href="mailto:frenchi@frenchi.ru">frenchi@frenchi.ru</a>
+
+        <div class="footer-bottom__socials footer-bottom__socials--mobile">
+          <a class="footer-bottom__socials-link base-link" href="#">
+            <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
+              <use href="img/icon/sprite.svg#socials-1-icon"></use>
+            </svg>
+          </a>
+          <a class="footer-bottom__socials-link base-link" href="#">
+            <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
+              <use href="img/icon/sprite.svg#socials-2-icon"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="footer-bottom">
     <div class="footer-bottom__container base-container">
-      <span class="footer-bottom__copyright">Copyright © 2001—2023 FRENCHI. All rights reserved.</span>
+      <span class="footer-bottom__copyright">Copyright © 2001—<span></span> FRENCHI. All rights reserved.</span>
+
+      <script>
+        document.querySelector('.footer-bottom__copyright span').textContent = new Date().getFullYear();
+      </script>
+
       <div class="footer-bottom__socials">
         <a class="footer-bottom__socials-link base-link" href="#">
           <svg class="footer-bottom__socials-icon" width="40" height="40" aria-hidden="true">
