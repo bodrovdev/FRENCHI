@@ -6,8 +6,6 @@
   margin: 100px 0 0 0;
 
   @include mixins.respond-to(notDesktop) {
-    min-height: 517px;
-
     margin: 64px 0 0 0;
   }
 
