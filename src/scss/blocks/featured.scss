@@ -5,6 +5,12 @@
 
   margin: 100px 0 0 0;
 
+  @include mixins.respond-to(notDesktop) {
+    min-height: 517px;
+
+    margin: 64px 0 0 0;
+  }
+
   &__container {
     position: relative;
 
@@ -13,6 +19,15 @@
     justify-content: space-between;
 
     padding: 0 0 28px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+
+      padding: 31px 0;
+    }
   }
 
   &__column {
@@ -27,20 +42,63 @@
     padding: 0 0 50px 0;
     margin: 0 18px 0 0;
 
+    @include mixins.respond-to(notDesktop) {
+      order: 1;
+      gap: 7px;
+
+      padding: 0 0 0 7px;
+      margin: 0;
+    }
+
     &-title {
+      font-family: 'Source Sans 3', sans-serif;
       color: #000;
       font-size: 40px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @include mixins.respond-to(notDesktop) {
+        color: #000;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
     }
 
     &-text {
+      font-family: 'Source Sans 3', sans-serif;
       color: #000;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 26px;
+
+      @include mixins.respond-to(notDesktop) {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+
+  &__image {
+    position: relative;
+
+    @include mixins.respond-to(notDesktop) {
+      order: 2;
+
+      width: 100%;
+    }
+  }
+
+  &__img {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
     }
   }
 
@@ -48,11 +106,32 @@
     flex-shrink: 0;
 
     margin: 0 21px 0 0;
+
+    @include mixins.respond-to(notDesktop) {
+      display: inline-block;
+
+      align-self: center;
+      order: 3;
+
+      max-width: none !important;
+
+      font-size: 12px !important;
+
+      padding: 10px 85px !important;
+      margin: 0;
+    }
   }
 
   &__new-icon {
     position: absolute;
     top: 40px;
     right: 0;
+
+    @include mixins.respond-to(notDesktop) {
+      top: 0;
+
+      width: 81px;
+      height: 81px;
+    }
   }
 }

@@ -8,4 +8,8 @@
   background-color: var(--color-black);
 
   padding: 31px 0 46px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 26px 0 35px 0;
+  }
 }

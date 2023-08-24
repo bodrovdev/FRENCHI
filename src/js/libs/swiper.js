@@ -21,7 +21,7 @@ function index_catalogue_slider() {
 
       var index_catalogue_slider = new Swiper(".index-catalogue__slider", {
         direction: "horizontal",
-        spaceBetween: 10,
+        spaceBetween: 20,
         slidesPerView: "auto",
 
         pagination: {
@@ -43,8 +43,20 @@ window.addEventListener("resize", index_catalogue_slider);
 // ! --- Слайдеры второго каталога на главной
 let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider--1", {
   direction: "horizontal",
-  slidesPerView: 5,
-  spaceBetween: 48,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      initialSlide: 1,
+      centeredSlides: true,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 5,
+      initialSlide: 0,
+      spaceBetween: 48,
+    },
+  },
 
   navigation: {
     nextEl: '.index-catalogue-goods__nav-arrow--next',
@@ -58,8 +70,20 @@ let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider--2", {
   direction: "horizontal",
-  slidesPerView: 5,
-  spaceBetween: 48,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      initialSlide: 1,
+      centeredSlides: true,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 5,
+      initialSlide: 0,
+      spaceBetween: 48,
+    },
+  },
 
   navigation: {
     nextEl: '.index-catalogue-goods__nav-arrow--next',
@@ -73,8 +97,20 @@ let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider--3", {
   direction: "horizontal",
-  slidesPerView: 5,
-  spaceBetween: 48,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      initialSlide: 1,
+      centeredSlides: true,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 5,
+      initialSlide: 0,
+      spaceBetween: 48,
+    },
+  },
 
   navigation: {
     nextEl: '.index-catalogue-goods__nav-arrow--next',
@@ -88,8 +124,20 @@ let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_4 = new Swiper(".index-catalogue-goods__slider--4", {
   direction: "horizontal",
-  slidesPerView: 5,
-  spaceBetween: 48,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      initialSlide: 1,
+      centeredSlides: true,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 5,
+      initialSlide: 0,
+      spaceBetween: 48,
+    },
+  },
 
   navigation: {
     nextEl: '.index-catalogue-goods__nav-arrow--next',

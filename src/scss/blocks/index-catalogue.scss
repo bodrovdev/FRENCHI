@@ -4,7 +4,7 @@
   margin: 80px 0 0 0;
 
   @include mixins.respond-to(notDesktop) {
-    margin: 40px 0 0 0;
+    margin: 63px 0 0 0;
   }
 
   &__container {
@@ -13,6 +13,10 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 30px;
+    }
   }
 
   &__slider {
@@ -30,15 +34,15 @@
     }
 
     &-slide {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
       @include mixins.respond-to(notDesktop) {
         width: 155px;
       }
 
       @include mixins.respond-to(desktopS) {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
         width: 220px;
       }
     }
@@ -47,7 +51,25 @@
       display: none;
 
       @include mixins.respond-to(notDesktop) {
-        display: block;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: block !important;
+
+        height: 10px !important;
+        border-radius: 34px !important;
+        background: #F6F6F6 !important;
+
+        margin: 25px 0 0 0 !important;
+
+        & .swiper-pagination-progressbar-fill {
+          height: 10px !important;
+          border-radius: 34px !important;
+          background: #E6E6E6 !important;
+        }
       }
     }
   }
@@ -71,6 +93,12 @@
       }
     }
 
+    &-img {
+      @include mixins.respond-to(notDesktop) {
+        max-width: 100px;
+      }
+    }
+
     &-bottom {
       display: flex;
       flex-direction: column;
@@ -79,6 +107,10 @@
       gap: 15px;
 
       text-align: center;
+
+      @include mixins.respond-to(notDesktop) {
+        gap: 10px;
+      }
     }
 
     &-title {
@@ -88,6 +120,15 @@
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+
+      @include mixins.respond-to(notDesktop) {
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
     }
 
     &-text {
@@ -97,6 +138,15 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @include mixins.respond-to(notDesktop) {
+        color: #000;
+        text-align: center;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
     }
 
     &-link {
@@ -110,12 +160,32 @@
 
       transition: color 0.2s, transform 0.2s;
 
+      @include mixins.respond-to(notDesktop) {
+        color: #777;
+        text-align: center;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+
       &:hover {
         color: #3D7829;
 
         transform: scale(1.1);
         transition: color 0.2s, transform 0.2s;
       }
+    }
+  }
+
+  &__link {
+    @include mixins.respond-to(notDesktop) {
+      max-width: none !important;
+
+      font-size: 12px !important;
+
+      padding: 8px 85px !important;
     }
   }
 }

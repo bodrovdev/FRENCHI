@@ -4,3 +4,10 @@
 @include mixins.font-face('Inter', normal, 600);
 @include mixins.font-face('Inter', normal, 700);
 @include mixins.font-face('Inter', normal, 900);
+
+@include mixins.font-face('SourceSans3', normal, 400);
+@include mixins.font-face('SourceSans3', normal, 500);
+@include mixins.font-face('SourceSans3', normal, 600);
+@include mixins.font-face('SourceSans3', normal, 700);
+@include mixins.font-face('SourceSans3', normal, 800);
+@include mixins.font-face('SourceSans3', normal, 900);
