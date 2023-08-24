@@ -3,6 +3,10 @@
 .index-catalogue {
   margin: 80px 0 0 0;
 
+  @include mixins.respond-to(notDesktop) {
+    margin: 40px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,9 @@
   }
 
   &__slider {
+    width: 100%;
+    max-width: 100%;
+
     &-wrapper {
       @include mixins.respond-to(desktopS) {
         display: flex;
@@ -23,12 +30,24 @@
     }
 
     &-slide {
+      @include mixins.respond-to(notDesktop) {
+        width: 155px;
+      }
+
       @include mixins.respond-to(desktopS) {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
         width: 220px;
+      }
+    }
+
+    &-pagination {
+      display: none;
+
+      @include mixins.respond-to(notDesktop) {
+        display: block;
       }
     }
   }
@@ -45,6 +64,11 @@
       background-size: 220px 150px;
       background-position: center;
       background-repeat: no-repeat;
+
+      @include mixins.respond-to(notDesktop) {
+        background-size: 150px 100px;
+        background-position: top;
+      }
     }
 
     &-bottom {

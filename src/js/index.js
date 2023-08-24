@@ -37,3 +37,30 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Категории
+window.addEventListener('load', () => {
+  let catalogue = document.querySelector('.main-nav__catalogue');
+  let main_nav = document.querySelector('.main-nav');
+  let mobile_menu = document.getElementById('mobile_menu');
+
+  function setCatalogueWith(element) {
+    catalogue.setAttribute('style', `width:${element.offsetWidth}px`)
+  }
+
+  if (window.innerWidth <= 1024) {
+    document.getElementById('catalogue_link').removeAttribute('href');
+    document.getElementById('catalogue_link').addEventListener('click', () => {
+      catalogue.classList.toggle('main-nav__catalogue--active');
+      document.getElementById('catalogue_link').classList.toggle('catalogue-link-active');
+    });
+
+    setCatalogueWith(mobile_menu);
+    document.addEventListener('resize', setCatalogueWith(mobile_menu));
+  }
+
+  else if (window.innerWidth > 1024) {
+    setCatalogueWith(main_nav);
+    document.addEventListener('resize', setCatalogueWith(main_nav));
+  }
+})

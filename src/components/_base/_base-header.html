@@ -30,8 +30,8 @@
         <div class="main-nav__mobile-menu" id="mobile_menu">
           <ul class="main-nav__mobile-menu-list base-list">
 
-            <li class="main-nav__mobile-menu-item" id="catalogue_link">
-              <a class="main-nav__mobile-menu-link base-link" href="#">
+            <li class="main-nav__mobile-menu-item" id="catalogue_item">
+              <a class="main-nav__mobile-menu-link base-link" href="#" id="catalogue_link">
                 Каталог
               </a>
               <div class="main-nav__catalogue">
@@ -80,15 +80,6 @@
                   </div>
                 </div>
               </div>
-              <script>
-                let catalogue = document.querySelector('.main-nav__catalogue');
-                let main_nav = document.querySelector('.main-nav');
-                function setCatalogueWith() {
-                  catalogue.setAttribute('style', `width:${main_nav.offsetWidth}px`)
-                }
-                document.addEventListener('load', setCatalogueWith());
-                document.addEventListener('resize', setCatalogueWith());
-              </script>
             </li>
 
             <li class="main-nav__mobile-menu-item">

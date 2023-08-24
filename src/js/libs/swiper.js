@@ -21,7 +21,7 @@ function index_catalogue_slider() {
 
       var index_catalogue_slider = new Swiper(".index-catalogue__slider", {
         direction: "horizontal",
-        spaceBetween: 15,
+        spaceBetween: 10,
         slidesPerView: "auto",
 
         pagination: {
