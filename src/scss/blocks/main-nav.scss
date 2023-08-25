@@ -101,7 +101,11 @@
 
       user-select: none;
 
-      padding: 10px 15px 10px 0;
+      padding: 0 15px 0 0;
+
+      @include mixins.respond-to(notDesktop) {
+        padding: 10px 15px 10px 0;
+      }
 
       &::after {
         content: "";
@@ -262,11 +266,11 @@
     gap: 100px;
 
     height: fit-content;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
     user-select: none;
     pointer-events: none;
 
-    padding: 0 0 20px 0;
+    padding: 0 0 16px 9px;
 
     @include mixins.respond-to(notDesktop) {
       position: relative;
@@ -495,21 +499,19 @@
 
   &__fake-border {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -7px;
+    left: 50%;
 
-    display: none;
+    display: block;
 
     width: 100%;
+    max-width: 1336px;
     height: 1px;
-    background-color: var(--color-black);
+    background-color: #351C1C;
+
+    transform: translateX(-50%);
 
     z-index: 5;
-
-    @include mixins.respond-to(notDesktop) {
-      display: block;
-    }
-
   }
 }
 

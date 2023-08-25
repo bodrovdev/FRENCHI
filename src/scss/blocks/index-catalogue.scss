@@ -3,8 +3,12 @@
 .index-catalogue {
   margin: 80px 0 0 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     margin: 63px 0 0 0;
+  }
+
+  @include mixins.respond-to(mobileOnly) {
+    margin: 117px 0 0 0;
   }
 
   &__container {
@@ -12,9 +16,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 71px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       gap: 30px;
     }
   }
@@ -24,22 +28,35 @@
     max-width: 100%;
 
     &-wrapper {
+      @include mixins.respond-to(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 38px 30px;
+      }
+
       @include mixins.respond-to(desktopS) {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 80px 60px;
+        gap: 68px 60px;
       }
     }
 
     &-slide {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 28px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         width: 155px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 208px;
+        gap: 20px;
       }
 
       @include mixins.respond-to(desktopS) {
@@ -50,7 +67,7 @@
     &-pagination {
       display: none;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         position: relative !important;
         top: auto !important;
         right: auto !important;
@@ -87,14 +104,14 @@
       background-position: center;
       background-repeat: no-repeat;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         background-size: 150px 100px;
         background-position: top;
       }
     }
 
     &-img {
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         max-width: 100px;
       }
     }
@@ -108,7 +125,7 @@
 
       text-align: center;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         gap: 10px;
       }
     }
@@ -121,13 +138,12 @@
       font-weight: 600;
       line-height: normal;
 
-      @include mixins.respond-to(notDesktop) {
-        color: #000;
-        text-align: center;
+      @include mixins.respond-to(mobileOnly) {
         font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 13px;
       }
     }
 
@@ -139,13 +155,12 @@
       font-weight: 400;
       line-height: normal;
 
-      @include mixins.respond-to(notDesktop) {
-        color: #000;
-        text-align: center;
+      @include mixins.respond-to(mobileOnly) {
         font-size: 11px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 11px;
       }
     }
 
@@ -160,7 +175,7 @@
 
       transition: color 0.2s, transform 0.2s;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         color: #777;
         text-align: center;
         font-size: 11px;
@@ -180,12 +195,26 @@
   }
 
   &__link {
-    @include mixins.respond-to(notDesktop) {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mixins.respond-to(mobileOnly) {
       max-width: none !important;
 
       font-size: 12px !important;
 
       padding: 8px 85px !important;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      max-width: none !important;
+
+      font-size: 9px !important;
+
+      padding: 5px 33px !important;
     }
   }
 }

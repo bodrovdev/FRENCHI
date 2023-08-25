@@ -15,7 +15,7 @@ let heading_slider = new Swiper(".heading__slider", {
 var index_catalogue_slider_init = false;
 
 function index_catalogue_slider() {
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 767) {
     if (!index_catalogue_slider_init) {
       index_catalogue_slider_init = true;
 
@@ -43,17 +43,17 @@ window.addEventListener("resize", index_catalogue_slider);
 // ! --- Слайдеры второго каталога на главной
 let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider--1", {
   direction: "horizontal",
+  slidesPerView: "auto",
 
   breakpoints: {
     320: {
-      slidesPerView: "auto",
       initialSlide: 1,
       centeredSlides: true,
       spaceBetween: 15,
     },
-    1025: {
-      slidesPerView: 5,
+    767: {
       initialSlide: 0,
+      centeredSlides: false,
       spaceBetween: 48,
     },
   },
