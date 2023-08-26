@@ -6,9 +6,13 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       gap: 34px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 92%;
     }
   }
 
@@ -27,6 +31,10 @@
         padding: 0 0 0 5px;
       }
 
+      @include mixins.respond-to(tabletOnly) {
+        gap: 116px;
+      }
+
       &-list {
         display: flex;
         flex-direction: column;
@@ -36,6 +44,10 @@
 
         @include mixins.respond-to(mobileOnly) {
           gap: 15px;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
+          gap: 2px;
         }
       }
 
@@ -51,8 +63,18 @@
 
         padding: 8px 15px;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           padding: 11px 20px;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
+          color: #FFF;
+          font-size: 9px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          padding: 5px 13px;
         }
       }
     }
@@ -64,7 +86,7 @@
       justify-content: flex-start;
       gap: 27px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         flex-direction: row;
         align-items: flex-end;
         gap: 53px;
@@ -77,8 +99,14 @@
         justify-content: flex-start;
         gap: 27px;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           gap: 15px;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
+          gap: 11px;
+
+          padding: 7px 0 0 0;
         }
       }
 
@@ -95,6 +123,14 @@
           color: #3D7829;
 
           transition: color 0.2s;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
+          color: #FFF;
+          font-size: 9px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
       }
     }
@@ -114,6 +150,14 @@
         color: #3D7829;
 
         transition: color 0.2s;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #FFF;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
       }
     }
   }

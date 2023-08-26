@@ -3,8 +3,12 @@
 .footer-bottom {
   margin: 22px 0 0 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     margin: 36px 0 0 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin: 9px 0 0 0;
   }
 
   &__container {
@@ -17,15 +21,19 @@
     display: flex;
     gap: 32px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       display: none;
       gap: 13px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 16px;
     }
 
     &--mobile {
       display: none;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         display: flex;
       }
     }
@@ -44,9 +52,14 @@
     }
 
     &-icon {
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         width: 34px;
         height: 34px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 24px;
+        height: 24px;
       }
     }
   }
@@ -57,5 +70,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    @include mixins.respond-to(tabletOnly) {
+      color: #FFF;
+      font-size: 9px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
   }
 }

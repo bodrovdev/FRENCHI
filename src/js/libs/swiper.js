@@ -54,7 +54,12 @@ let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider
     767: {
       initialSlide: 0,
       centeredSlides: false,
-      spaceBetween: 48,
+      spaceBetween: 16,
+    },
+    1023: {
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 47,
     },
   },
 
@@ -70,18 +75,23 @@ let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider--2", {
   direction: "horizontal",
+  slidesPerView: "auto",
 
   breakpoints: {
     320: {
-      slidesPerView: "auto",
       initialSlide: 1,
       centeredSlides: true,
       spaceBetween: 15,
     },
-    1025: {
-      slidesPerView: 5,
+    767: {
       initialSlide: 0,
-      spaceBetween: 48,
+      centeredSlides: false,
+      spaceBetween: 16,
+    },
+    1023: {
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 47,
     },
   },
 
@@ -97,18 +107,23 @@ let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider--3", {
   direction: "horizontal",
+  slidesPerView: "auto",
 
   breakpoints: {
     320: {
-      slidesPerView: "auto",
       initialSlide: 1,
       centeredSlides: true,
       spaceBetween: 15,
     },
-    1025: {
-      slidesPerView: 5,
+    767: {
       initialSlide: 0,
-      spaceBetween: 48,
+      centeredSlides: false,
+      spaceBetween: 16,
+    },
+    1023: {
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 47,
     },
   },
 
@@ -124,18 +139,23 @@ let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider
 });
 let index_catalogue_slider_second_4 = new Swiper(".index-catalogue-goods__slider--4", {
   direction: "horizontal",
+  slidesPerView: "auto",
 
   breakpoints: {
     320: {
-      slidesPerView: "auto",
       initialSlide: 1,
       centeredSlides: true,
       spaceBetween: 15,
     },
-    1025: {
-      slidesPerView: 5,
+    767: {
       initialSlide: 0,
-      spaceBetween: 48,
+      centeredSlides: false,
+      spaceBetween: 16,
+    },
+    1023: {
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 47,
     },
   },
 

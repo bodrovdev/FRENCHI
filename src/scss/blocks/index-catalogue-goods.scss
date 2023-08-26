@@ -3,8 +3,12 @@
 .index-catalogue-goods {
   margin: 170px 0 0 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     margin: 91px 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin: 92px 0 0 0;
   }
 
   &__container {
@@ -18,20 +22,24 @@
     justify-content: flex-start;
     gap: 90px;
 
-    margin: 0 0 46px 0;
+    width: 100%;
+    max-width: 1268px;
 
-    @include mixins.respond-to(desktopS) {
-      width: 100%;
-      max-width: 1268px;
+    margin: 0 auto 46px auto;
 
-      margin: 0 auto 46px auto;
-    }
-
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       align-self: center;
       flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 63px;
+
+      padding: 0 0 0 24px;
+
+      margin: 0 auto 39px auto;
     }
   }
 
@@ -51,16 +59,24 @@
       transition: text-decoration 0.2s;
     }
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       font-size: 14px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 11px;
     }
   }
 
   &__tabs-body {
     margin: 0 0 66px 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       margin: 0 0 16px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 29px 0;
     }
   }
 
@@ -95,6 +111,10 @@
       }
     }
 
+    @include mixins.respond-to(tabletOnly) {
+      max-width: 678px;
+    }
+
     &-slide {
       display: flex;
       flex-direction: column;
@@ -111,10 +131,16 @@
 
       padding: 45px 25px 25px 25px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         width: 230px !important;
 
         padding: 20px 25px 25px 25px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 123px !important;
+
+        padding: 21px 14px;
       }
     }
 
@@ -133,8 +159,12 @@
 
       z-index: 10;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         display: none;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        bottom: 92px;
       }
 
       & .swiper-button-disabled {
@@ -147,7 +177,7 @@
     &-pagination {
       display: none;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         display: flex;
       }
     }
@@ -163,6 +193,12 @@
       @include mixins.respond-to(mobileOnly) {
         margin: 0 0 27px 0;
       }
+
+      @include mixins.respond-to(tabletOnly) {
+        max-width: 36px;
+
+        margin: 0 0 17px 0;
+      }
     }
 
     &-title {
@@ -175,13 +211,24 @@
 
       margin: 0 0 20px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         color: #000;
         text-align: center;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #000;
+        text-align: center;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 0 0 9px 0;
       }
     }
 
@@ -201,6 +248,16 @@
 
         transform: scale(1.1);
         transition: color 0.2s, transform 0.2s;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #777;
+        text-align: center;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: underline;
       }
     }
   }
@@ -222,11 +279,17 @@
           filter: brightness(0) saturate(100%) invert(37%) sepia(24%) saturate(1196%) hue-rotate(60deg) brightness(98%) contrast(88%);
         }
       }
+
+      &-icon {
+        @include mixins.respond-to(tabletOnly) {
+          width: 10px;
+          height: 20px;
+        }
+      }
     }
   }
 
   &__link {
-
     color: #000;
     font-size: 14px;
     font-style: normal;
@@ -235,11 +298,17 @@
 
     margin: 0 auto;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       width: 100%;
       max-width: none !important;
 
       font-size: 14px !important;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 9px !important;
+
+      padding: 5px 33px !important;
     }
   }
 }

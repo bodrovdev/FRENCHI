@@ -3,8 +3,12 @@
 .info-block {
   margin: 150px 0 110px 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     margin: 90px 0 130px 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin: 90px 0 153px 0;
   }
 
   &__container {
@@ -13,8 +17,12 @@
     justify-content: space-between;
     gap: 10px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      align-items: flex-end;
     }
   }
 
@@ -32,6 +40,10 @@
       padding: 0 0 0 5px;
     }
 
+    @include mixins.respond-to(tabletOnly) {
+      padding: 0 0 0 22px;
+    }
+
     &-title {
       font-family: 'Source Sans 3', sans-serif;
       color: #000;
@@ -42,7 +54,7 @@
 
       margin: 0 0 30px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         color: #000;
         font-size: 22px;
         font-style: normal;
@@ -50,6 +62,16 @@
         line-height: normal;
 
         margin: 0 0 15px 0;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 108.1%;
+
+        margin: 0 0 21px 0;
       }
     }
 
@@ -74,6 +96,16 @@
 
         margin: 0 0 19px 0;
       }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #000;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 0 0 25px 0;
+      }
     }
 
     &-link {
@@ -83,7 +115,7 @@
         display: none;
       }
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         display: none;
 
         width: 100%;
@@ -94,6 +126,12 @@
         &--mobile {
           display: flex;
         }
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 9px !important;
+
+        padding: 5px 49px !important;
       }
     }
   }
@@ -108,13 +146,26 @@
     width: 100%;
 
     @include mixins.respond-to(mobileOnly) {
+      flex-shrink: 0;
       gap: 38px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-shrink: 0;
+
+      width: fit-content;
+      height: fit-content;
     }
   }
 
   &__img {
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+      max-width: 270px;
     }
   }
 }

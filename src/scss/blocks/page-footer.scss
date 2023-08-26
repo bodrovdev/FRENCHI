@@ -9,7 +9,11 @@
 
   padding: 31px 0 46px 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     padding: 26px 0 35px 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    padding: 13px 0 35px 0;
   }
 }

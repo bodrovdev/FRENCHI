@@ -32,9 +32,12 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
+      align-items: stretch;
       justify-content: flex-start;
 
-      width: 84%;
+      width: 100%;
+
+      padding: 0 0 0 66px;
     }
   }
 
@@ -63,7 +66,7 @@
 
       max-width: 270px;
 
-      padding: 0 0 56px 0;
+      padding: 34px 0 56px 0;
       margin: 0;
     }
 
@@ -180,7 +183,7 @@
       font-size: 9px !important;
 
       padding: 5px 34px !important;
-      margin: 0 0 16px 0;
+      margin: auto 0 16px 0;
     }
   }
 
@@ -195,6 +198,14 @@
 
       width: 81px;
       height: 81px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      top: 15px;
+      right: 25px;
+
+      width: 76px;
+      height: 76px;
     }
   }
 }
