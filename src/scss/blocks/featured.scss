@@ -6,7 +6,13 @@
   margin: 100px 0 0 0;
 
   @include mixins.respond-to(mobileOnly) {
+    min-height: 519px;
+
     margin: 64px 0 0 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin: 58px 0 0 0;
   }
 
   &__container {
@@ -20,13 +26,15 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      gap: 20px;
+      gap: 6px;
 
       padding: 31px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      padding: 34px 0 18px 0;
+      justify-content: flex-start;
+
+      width: 84%;
     }
   }
 
@@ -53,7 +61,10 @@
     @include mixins.respond-to(tabletOnly) {
       gap: 11px;
 
-      max-width: none;
+      max-width: 270px;
+
+      padding: 0 0 56px 0;
+      margin: 0;
     }
 
     &-title {
@@ -64,6 +75,7 @@
       line-height: normal;
 
       @include mixins.respond-to(mobileOnly) {
+        font-family: 'Source Sans 3', sans-serif;
         color: #000;
         font-size: 22px;
         font-style: normal;
@@ -72,6 +84,7 @@
       }
 
       @include mixins.respond-to(tabletOnly) {
+        font-family: 'Source Sans 3', sans-serif;
         color: #000;
         font-size: 20px;
         font-style: normal;
@@ -95,23 +108,42 @@
         font-weight: 400;
         line-height: normal;
       }
+
+      @include mixins.respond-to(tabletOnly) {
+        color: #000;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
     }
   }
-
 
   &__image {
     position: relative;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
     @include mixins.respond-to(mobileOnly) {
+      left: -5%;
+
       order: 2;
 
-      width: 100%;
+      width: 110%;
+
+      margin: 0 auto;
     }
   }
 
   &__img {
-    @include mixins.respond-to(mobileOnly) {
+    @include mixins.respond-to(tabletOnly) {
       width: 100%;
+      max-width: 345px;
+      height: 100%;
     }
   }
 
@@ -139,6 +171,17 @@
       padding: 10px 85px !important;
       margin: 0;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: inline-block;
+
+      max-width: none !important;
+
+      font-size: 9px !important;
+
+      padding: 5px 34px !important;
+      margin: 0 0 16px 0;
+    }
   }
 
   &__new-icon {
@@ -147,7 +190,8 @@
     right: 0;
 
     @include mixins.respond-to(mobileOnly) {
-      top: 0;
+      top: 15px;
+      right: 73px;
 
       width: 81px;
       height: 81px;

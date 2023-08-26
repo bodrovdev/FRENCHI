@@ -19,10 +19,12 @@
       justify-content: flex-start;
       gap: 60px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         flex-wrap: wrap;
 
         gap: 34px 43px;
+
+        padding: 0 0 0 5px;
       }
 
       &-list {
@@ -31,6 +33,10 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 27px;
+
+        @include mixins.respond-to(mobileOnly) {
+          gap: 15px;
+        }
       }
 
       &-link {

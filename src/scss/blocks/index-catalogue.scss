@@ -7,8 +7,8 @@
     margin: 63px 0 0 0;
   }
 
-  @include mixins.respond-to(mobileOnly) {
-    margin: 117px 0 0 0;
+  @include mixins.respond-to(tabletOnly) {
+    margin: 84px 0 0 0;
   }
 
   &__container {
@@ -19,7 +19,11 @@
     gap: 71px;
 
     @include mixins.respond-to(mobileOnly) {
-      gap: 30px;
+      gap: 24px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 53px;
     }
   }
 
@@ -28,12 +32,12 @@
     max-width: 100%;
 
     &-wrapper {
-      @include mixins.respond-to(tablet) {
+      @include mixins.respond-to(tabletOnly) {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 38px 30px;
+        gap: 30px;
       }
 
       @include mixins.respond-to(desktopS) {
@@ -50,17 +54,16 @@
       flex-direction: column;
       gap: 28px;
 
+      width: 220px;
+
       @include mixins.respond-to(mobileOnly) {
         width: 155px;
+        gap: 20px;
       }
 
       @include mixins.respond-to(tabletOnly) {
         width: 208px;
-        gap: 20px;
-      }
-
-      @include mixins.respond-to(desktopS) {
-        width: 220px;
+        gap: 15px;
       }
     }
 
@@ -127,6 +130,10 @@
 
       @include mixins.respond-to(mobileOnly) {
         gap: 10px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        gap: 11px;
       }
     }
 
