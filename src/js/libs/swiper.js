@@ -41,7 +41,7 @@ index_catalogue_slider();
 window.addEventListener("resize", index_catalogue_slider);
 
 // ! --- Слайдеры второго каталога на главной
-let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider--1", {
+let index_catalogue_slider_second_1 = new Swiper(".catalogue-goods__slider--1", {
   direction: "horizontal",
   slidesPerView: "auto",
 
@@ -64,16 +64,16 @@ let index_catalogue_slider_second_1 = new Swiper(".index-catalogue-goods__slider
   },
 
   navigation: {
-    nextEl: '.index-catalogue-goods__nav-arrow--next',
-    prevEl: '.index-catalogue-goods__nav-arrow--prev',
+    nextEl: '.catalogue-goods__nav-arrow--next',
+    prevEl: '.catalogue-goods__nav-arrow--prev',
   },
 
   pagination: {
-    el: ".index-catalogue-goods__slider-pagination",
+    el: ".catalogue-goods__slider-pagination",
     clickable: true,
   },
 });
-let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider--2", {
+let index_catalogue_slider_second_2 = new Swiper(".catalogue-goods__slider--2", {
   direction: "horizontal",
   slidesPerView: "auto",
 
@@ -96,16 +96,16 @@ let index_catalogue_slider_second_2 = new Swiper(".index-catalogue-goods__slider
   },
 
   navigation: {
-    nextEl: '.index-catalogue-goods__nav-arrow--next',
-    prevEl: '.index-catalogue-goods__nav-arrow--prev',
+    nextEl: '.catalogue-goods__nav-arrow--next',
+    prevEl: '.catalogue-goods__nav-arrow--prev',
   },
 
   pagination: {
-    el: ".index-catalogue-goods__slider-pagination",
+    el: ".catalogue-goods__slider-pagination",
     clickable: true,
   },
 });
-let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider--3", {
+let index_catalogue_slider_second_3 = new Swiper(".catalogue-goods__slider--3", {
   direction: "horizontal",
   slidesPerView: "auto",
 
@@ -128,16 +128,16 @@ let index_catalogue_slider_second_3 = new Swiper(".index-catalogue-goods__slider
   },
 
   navigation: {
-    nextEl: '.index-catalogue-goods__nav-arrow--next',
-    prevEl: '.index-catalogue-goods__nav-arrow--prev',
+    nextEl: '.catalogue-goods__nav-arrow--next',
+    prevEl: '.catalogue-goods__nav-arrow--prev',
   },
 
   pagination: {
-    el: ".index-catalogue-goods__slider-pagination",
+    el: ".catalogue-goods__slider-pagination",
     clickable: true,
   },
 });
-let index_catalogue_slider_second_4 = new Swiper(".index-catalogue-goods__slider--4", {
+let index_catalogue_slider_second_4 = new Swiper(".catalogue-goods__slider--4", {
   direction: "horizontal",
   slidesPerView: "auto",
 
@@ -160,12 +160,12 @@ let index_catalogue_slider_second_4 = new Swiper(".index-catalogue-goods__slider
   },
 
   navigation: {
-    nextEl: '.index-catalogue-goods__nav-arrow--next',
-    prevEl: '.index-catalogue-goods__nav-arrow--prev',
+    nextEl: '.catalogue-goods__nav-arrow--next',
+    prevEl: '.catalogue-goods__nav-arrow--prev',
   },
 
   pagination: {
-    el: ".index-catalogue-goods__slider-pagination",
+    el: ".catalogue-goods__slider-pagination",
     clickable: true,
   },
 });

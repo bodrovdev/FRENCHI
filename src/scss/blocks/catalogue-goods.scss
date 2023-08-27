@@ -1,6 +1,6 @@
 @use "../mixins";
 
-.index-catalogue-goods {
+.catalogue-goods {
   margin: 170px 0 0 0;
 
   @include mixins.respond-to(mobileOnly) {
@@ -25,7 +25,7 @@
     width: 100%;
     max-width: 1268px;
 
-    margin: 0 auto 46px auto;
+    margin: 0 auto 21px auto;
 
     @include mixins.respond-to(mobileOnly) {
       align-self: center;
@@ -95,6 +95,7 @@
     width: 100%;
     max-width: 1268px;
 
+    padding: 25px 0 0 0;
     margin: 0 auto;
 
     @include mixins.respond-to(mobileOnly) {
@@ -116,6 +117,8 @@
     }
 
     &-slide {
+      position: relative;
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -141,6 +144,10 @@
         width: 123px !important;
 
         padding: 21px 14px;
+      }
+
+      &--new .catalogue-goods__slide-new {
+        display: block;
       }
     }
 
@@ -184,6 +191,33 @@
   }
 
   &__slide {
+    &-new {
+      position: absolute;
+      top: -25px;
+      right: -15px;
+
+      display: none;
+
+      width: 81px;
+      height: 81px;
+
+      @include mixins.respond-to(mobileOnly) {
+        top: 5px;
+        right: 5px;
+
+        width: 40px;
+        height: 40px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        top: 5px;
+        right: 5px;
+
+        width: 50px;
+        height: 50px;
+      }
+    }
+
     &-img {
       object-fit: cover;
       height: auto;

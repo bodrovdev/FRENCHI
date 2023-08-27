@@ -26,11 +26,16 @@
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
 
-@use 'blocks/main-nav';@use 'blocks/heading';
+@use 'blocks/main-nav';
+@use 'blocks/heading';
 @use 'blocks/page-link';
 @use 'blocks/index-catalogue';
 @use 'blocks/featured';
-@use 'blocks/index-catalogue-goods';
+@use 'blocks/catalogue-goods';
 @use 'blocks/info-block';
 @use 'blocks/footer-top';
 @use 'blocks/footer-bottom';
+@use 'blocks/bread';
+@use 'blocks/page-categories';
+@use 'blocks/page-title';
+@use 'blocks/page-category-goods';@use 'blocks/archive';

@@ -2,4 +2,16 @@
 
 .page-content {
   flex-grow: 1;
+
+  &__wrapper {
+    margin: 175px 0 0 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 122px 0 0 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 109px 0 0 0;
+    }
+  }
 }

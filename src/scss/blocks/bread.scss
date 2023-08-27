@@ -1,0 +1,74 @@
+@use "../mixins";
+
+.bread {
+  width: 100%;
+
+  @include mixins.respond-to(mobileOnly) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 7px;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    color: #828282;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    transition: color 0.3s;
+
+    padding: 0 0 0 16px;
+
+    @include mixins.respond-to(tabletOnly) {
+      font-style: 10px;
+
+      padding: 0 0 0 11px;
+    }
+
+    &::before {
+      content: "/";
+      position: absolute;
+      left: 0;
+
+      color: #828282;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @include mixins.respond-to(tabletOnly) {
+        font-style: 10px;
+      }
+    }
+
+    &:first-child {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: #3D7829;
+
+      transition: color 0.3s;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+}

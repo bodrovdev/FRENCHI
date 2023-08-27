@@ -1,0 +1,153 @@
+@use "../mixins";
+
+.page-categories {
+
+  margin: 0 0 159px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 0 0 32px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 auto 87px auto;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 auto 52px auto;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 auto 49px auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 108px 51px;
+
+    @include mixins.respond-to(mobileOnly) {
+      gap: 56px 14px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      gap: 36px 39px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+    width: 388px;
+    min-height: 634px;
+
+    @include mixins.respond-to(mobileOnly) {
+      align-items: center;
+      justify-content: center;
+
+      width: 168px;
+      min-height: 286px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 209px;
+      min-height: 345px;
+    }
+
+    &-image {
+      border-radius: 22px;
+      box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25) inset;
+
+      margin: 0 0 23px 0;
+
+      @include mixins.respond-to(mobileOnly) {
+        margin: 0 0 11px 0;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        margin: 0 0 19px 0;
+      }
+    }
+
+    &-img {
+      @include mixins.respond-to(notDesktop) {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-title {
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+
+      margin: 0 0 15px 0;
+
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 14px;
+        text-align: center;
+
+        margin: 0 0 15px 0;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 11px;
+
+        margin: 0 0 16px 0;
+      }
+    }
+
+    &-link {
+      border-radius: 4px;
+      border: 1px solid #000;
+
+      color: #000;
+      font-family: var(--font-family-default);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+
+      padding: 10px 50px;
+
+      &:hover {
+        background: #3D7829;
+        border: 1px solid #3D7829;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.46) inset;
+
+        color: #FFF;
+
+        transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+      }
+
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 9px;
+        font-weight: 500;
+
+        padding: 7px 50px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 9px;
+
+        padding: 5px 40px;
+      }
+    }
+  }
+}

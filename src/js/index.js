@@ -63,3 +63,15 @@ window.addEventListener('load', () => {
     document.addEventListener('resize', setCatalogueWith(main_nav));
   }
 })
+
+// ? Отображение плашки "новинка" на слайдах с товарами
+window.addEventListener('load', () => {
+  let catalogueSlides = document.querySelectorAll('.catalogue-goods__slider-slide');
+
+  if (catalogueSlides === null) {
+    return;
+  }
+  catalogueSlides.forEach(slide => {
+    slide.dataset.new === 'Новинка' ? slide.classList.add('catalogue-goods__slider-slide--new') : slide;
+  })
+})

@@ -110,7 +110,7 @@
       &::after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 60%;
         right: 0;
 
         width: 4px;
@@ -122,6 +122,10 @@
 
         transform: translateY(-50%);
         transition: transform 0.3s;
+
+        @include mixins.respond-to(notDesktop) {
+          top: 55%;
+        }
       }
     }
   }
