@@ -1,0 +1,77 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  <div class="page-content__wrapper single-content-wrapper">
+    @@include('components/_bem/_bread.html', {
+    "current_link": "page-about.html",
+    "current_text": "О компании",
+
+    "current_link_2": "",
+    "current_text_2": "",
+
+    "current_link_3": "",
+    "current_text_3": "",
+    })
+    <section class="page-about">
+      <div class="page-about__container base-container">
+        <div class="page-about__top">
+          <div class="page-about__top-column page-about__top-column--left">
+            <span class="page-about__top-column-label">
+              О компании<br>
+              Lorem ipsum
+            </span>
+          </div>
+          <div class="page-about__top-column page-about__top-column--right">
+            <h2 class="page-about__top-column-title base-title">О компании</h2>
+            <p class="page-about__top-column-text base-par">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nisl a sapien tincidunt, in congue ipsum suscipit. Morbi cursus eros leo, id blandit velit placerat sit amet. Aenean suscipit est eu porttitor feugiat. Donec mollis
+              tincidunt turpis, et tempus mauris tincidunt nec. Ut dui nisl, viverra in libero eget, lobortis sollicitudin metus. Quisque ullamcorper sapien quis ligula pretium porta. Proin sollicitudin in urna eget tempus. Curabitur in eleifend arcu. Morbi
+              quis tortor et lacus bibendum malesuada. Nunc porta nibh ipsum, at cursus magna commodo in. Pellentesque quis efficitur urna. Quisque ut scelerisque sapien. In sagittis leo id metus tincidunt faucibus. Donec iaculis, enim vitae interdum tempus,
+              ipsum massa euismod felis, vitae vehicula lectus dolor id ligula. Aliquam sollicitudin odio eget lacinia dictum. Aliquam commodo orci in porttitor laoreet.
+            </p>
+          </div>
+        </div>
+        <div class="page-about__middle">
+          <div class="page-about__middle-column page-about__middle-column--left">
+            <p class="page-about__middle-column-text base-par">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Maecenas scelerisque nisl a sapien tincidunt, in congue ipsum suscipit.
+            </p>
+            <span class="page-about__middle-column-subtext">Lorem ipsum dolor sit ame</span>
+          </div>
+          <div class="page-about__middle-column page-about__middle-column--right" style="background: center / cover no-repeat url('img/image/about-middle.png');">
+          </div>
+        </div>
+
+        <div class="page-about__bottom">
+          <div class="page-about__bottom-column page-about__bottom-column--left">
+            <div class="page-about__bottom-column-img page-about__bottom-column-img--large" style="background: center / cover no-repeat url('img/image/about-bottom-large.png');"></div>
+            <div class="page-about__bottom-column-img page-about__bottom-column-img--small" style="background: center / cover no-repeat url('img/image/about-bottom-small.png');"></div>
+            <div class="page-about__bottom-column-img page-about__bottom-column-img--medium" style="background: center / cover no-repeat url('img/image/about-bottom-medium.png');"></div>
+          </div>
+          <div class="page-about__bottom-column page-about__bottom-column--right">
+            <h2 class="page-about__bottom-column-title base-title">Lorem ipsum</h2>
+            <p class="page-about__bottom-column-text base-par">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nisl a sapien tincidunt, in congue ipsum suscipit. Morbi cursus eros leo, id blandit velit placerat sit amet. Aenean suscipit est eu porttitor feugiat. Donec mollis
+              tincidunt turpis, et tempus mauris tincidunt nec. Ut dui nisl, viverra in libero eget, lobortis sollicitudin metus. Quisque ullamcorper sapien quis ligula pretium porta. Proin sollicitudin in urna eget tempus. Curabitur in eleifend arcu. Morbi
+              quis tortor et lacus bibendum malesuada. Nunc porta nibh ipsum, at cursus magna commodo in.
+            </p>
+            <div class="page-about__bottom-column-items">
+              <p class="page-about__bottom-column-item base-par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p class="page-about__bottom-column-item base-par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p class="page-about__bottom-column-item base-par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')
