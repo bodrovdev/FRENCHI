@@ -40,5 +40,7 @@
 @use 'blocks/page-title';
 @use 'blocks/page-category-goods';
 @use 'blocks/archive';
-@use 'blocks/single-goods';@use 'blocks/page-about';
+@use 'blocks/single';
+@use 'blocks/page-about';
 @use 'blocks/page-contacts';
+@use 'blocks/single-goods';

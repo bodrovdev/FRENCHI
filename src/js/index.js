@@ -75,3 +75,23 @@ window.addEventListener('load', () => {
     slide.dataset.new === 'Новинка' ? slide.classList.add('catalogue-goods__slider-slide--new') : slide;
   })
 })
+
+// ? --- Раскрывающийся блок на странице товара
+window.addEventListener('load', () => {
+  let spread_items = document.querySelectorAll('.single-goods__heading-info-spread-item');
+  if (spread_items === null) {
+    return;
+  }
+  else {
+    spread_items.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.contains('single-goods__heading-info-spread-item--active') ?
+          item.classList.remove('single-goods__heading-info-spread-item--active') :
+          (() => {
+            spread_items.forEach(item_value => { item_value.classList.remove('single-goods__heading-info-spread-item--active'); })
+            item.classList.add('single-goods__heading-info-spread-item--active')
+          })();
+      })
+    })
+  }
+})

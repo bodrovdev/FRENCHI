@@ -1,0 +1,53 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  <div class="page-content__wrapper single-content-wrapper">
+    @@include('components/_bem/_bread.html', {
+    "current_link": "archive.html",
+    "current_text": "Новости",
+
+    "current_link_2": "single.html",
+    "current_text_2": "Lorem ipsum dolor sit amet",
+
+    "current_link_3": "",
+    "current_text_3": "",
+    })
+
+    <section class="single">
+      <div class="single__container base-container">
+        <div class="single__image">
+          <style>
+            .single__image {
+              background-image: url('img/image/single.png');
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+          </style>
+        </div>
+        <div class="single__content">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nisl a sapien tincidunt, in congue ipsum suscipit. Morbi cursus eros leo, id blandit velit placerat sit amet. Aenean suscipit est eu porttitor feugiat. Donec mollis
+            tincidunt turpis, et tempus mauris tincidunt nec. Ut dui nisl, viverra in libero eget, lobortis sollicitudin metus. Quisque ullamcorper sapien quis ligula pretium porta. Proin sollicitudin in urna eget tempus. Curabitur in eleifend arcu. Morbi quis
+            tortor et lacus bibendum malesuada. Nunc porta nibh ipsum, at cursus magna commodo in. Pellentesque quis efficitur urna. Quisque ut scelerisque sapien. In sagittis leo id metus tincidunt faucibus. Donec iaculis, enim vitae interdum tempus, ipsum
+            massa euismod felis, vitae vehicula lectus dolor id ligula. Aliquam sollicitudin odio eget lacinia dictum. Aliquam commodo orci in porttitor laoreet.
+          </p>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nisl a sapien tincidunt, in congue ipsum suscipit. Morbi cursus eros leo, id blandit velit placerat sit amet. Aenean suscipit est eu porttitor feugiat. Donec mollis
+              tincidunt turpis, et tempus mauris tincidunt nec. Ut dui nisl, viverra in libero eget, lobortis sollicitudin metus. Quisque ullamcorper sapien quis ligula pretium porta. Proin sollicitudin in urna eget tempus. Curabitur in eleifend arcu. Morbi
+              quis
+              tortor et lacus bibendum malesuada. Nunc porta nibh ipsum, at cursus magna commodo in. Pellentesque quis efficitur urna. Quisque ut scelerisque sapien. In sagittis leo id metus tincidunt faucibus. Donec iaculis, enim vitae interdum tempus, ipsum
+              massa euismod felis, vitae vehicula lectus dolor id ligula. Aliquam sollicitudin odio eget lacinia dictum. Aliquam commodo orci in porttitor laoreet.
+            </p>
+            <img src="img/image/single-content.png">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/_bem/_catalogue-goods.html')
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')
