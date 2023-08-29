@@ -121,20 +121,46 @@
     <a class="bread__current_3 bread__link base-link" href=""></a>
   </div>
 </div>
-
     <section class="page-contacts">
       <div class="page-contacts__container base-container">
         <h1 class="page-contacts__title base-title">Контакты</h1>
         <div class="page-contacts__wrapper">
           <script type="text/javascript" charset="utf-8" async
             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f294dda76cfb9b1c282631aacd25768cb3cdb9c0206aab5eac8ea147c115be0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
-
           <div class="page-contacts__info">
-            <button class="page-contacts__tab-button base-button">Офис</button>
-            <button class="page-contacts__tab-button base-button">Производство</button>
-            <div class="page-contacts__tab-body">
-              <div class="page-contacts__tab-body-item">1</div>
-              <div class="page-contacts__tab-body-item">2</div>
+            <input class="page-contacts__tabs-button-input page-contacts__tabs-button-input--1 visually-hidden" type="radio" id="tab-1" name="page-contacts-radio" checked>
+            <label class="page-contacts__tabs-button base-button" for="tab-1">Офис</label>
+            <input class="page-contacts__tabs-button-input page-contacts__tabs-button-input--2 visually-hidden" type="radio" id="tab-2" name="page-contacts-radio">
+            <label class="page-contacts__tabs-button base-button" for="tab-2">Производство</label>
+            <div class="page-contacts__tabs-body">
+              <div class="page-contacts__tabs-body-item page-contacts__tabs-body-item--1">
+                <h3 class="page-contacts__tabs-body-item-title base-title">Адрес</h3>
+                <span class="page-contacts__tabs-body-item-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </span>
+                <h3 class="page-contacts__tabs-body-item-title base-title">Контактный телефон</h3>
+                <a class="page-contacts__tabs-body-item-content base-link" href="tel:+7 (495) 215-10-67">
+                  +7 (495) 215-10-67
+                </a>
+                <h3 class="page-contacts__tabs-body-item-title base-title">Email</h3>
+                <a class="page-contacts__tabs-body-item-content base-link" href="mailto:frenchi@mail.ru">
+                  frenchi@mail.ru
+                </a>
+              </div>
+              <div class="page-contacts__tabs-body-item page-contacts__tabs-body-item--2">
+                <h3 class="page-contacts__tabs-body-item-title base-title">Адрес</h3>
+                <span class="page-contacts__tabs-body-item-content">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <h3 class="page-contacts__tabs-body-item-title base-title">Контактный телефон</h3>
+                <a class="page-contacts__tabs-body-item-content base-link" href="tel:+7 (495) 215-10-67">
+                  +7 (495) 316-22-36
+                </a>
+                <h3 class="page-contacts__tabs-body-item-title base-title">Email</h3>
+                <a class="page-contacts__tabs-body-item-content base-link" href="mailto:frenchi2@mail.ru">
+                  frenchi2@mail.ru
+                </a>
+              </div>
             </div>
           </div>
         </div>
