@@ -112,3 +112,29 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Кнопка "показать ещё" на главной странице
+window.addEventListener('load', () => {
+  let target_slides = document.querySelectorAll('.single-goods__reviews-slider-slide');
+  if (target_slides === null) {
+    return;
+  }
+  else {
+    target_slides.forEach(slide => {
+      let target_show_button = slide.querySelector('.single-goods__reviews-slider-slide-button');
+      let target_text_block = slide.querySelector('.single-goods__reviews-slider-slide-text');
+
+      if (target_text_block.offsetHeight > 40) {
+        target_text_block.classList.add('single-goods__reviews-slider-slide-text--hidden');
+
+        target_show_button.addEventListener('click', () => {
+          target_text_block.classList.toggle('single-goods__reviews-slider-slide-text--hidden');
+
+          target_text_block.classList.contains('single-goods__reviews-slider-slide-text--hidden') ?
+            target_show_button.textContent = 'Читать полностью' :
+            target_show_button.textContent = 'Свернуть';
+        })
+      }
+    })
+  }
+})

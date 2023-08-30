@@ -200,6 +200,30 @@ let single_goods_slider = new Swiper(".single-goods__heading-slider", {
   },
 });
 
+let single_goods_reviews_slider = new Swiper(".single-goods__reviews-slider", {
+  direction: "horizontal",
+  slidesPerView: 1,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 18,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 18,
+    }
+  },
+
+  navigation: {
+    nextEl: ".single-goods__reviews-slider-button--next",
+    prevEl: ".single-goods__reviews-slider-button--prev",
+  },
+});
+
 
 // ? Мобильный слайдер
 // var mobile_slider_init = false;
