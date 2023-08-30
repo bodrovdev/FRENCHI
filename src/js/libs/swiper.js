@@ -4,6 +4,13 @@ import Swiper from 'swiper/bundle';
 let heading_slider = new Swiper(".heading__slider", {
   direction: "horizontal",
   slidesPerView: 1,
+  speed: 700,
+  loop: true,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
   pagination: {
     el: ".heading__slider-pagination",

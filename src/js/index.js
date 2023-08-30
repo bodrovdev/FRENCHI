@@ -1,3 +1,5 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
   if (!(document.querySelectorAll('input') === null)) {
@@ -64,7 +66,7 @@ window.addEventListener('load', () => {
   }
 })
 
-// ? Отображение плашки "новинка" на слайдах с товарами
+// ? --- Отображение плашки "новинка" на слайдах с товарами
 window.addEventListener('load', () => {
   let catalogueSlides = document.querySelectorAll('.catalogue-goods__slider-slide');
 
@@ -91,6 +93,21 @@ window.addEventListener('load', () => {
             spread_items.forEach(item_value => { item_value.classList.remove('single-goods__heading-info-spread-item--active'); })
             item.classList.add('single-goods__heading-info-spread-item--active')
           })();
+      })
+    })
+  }
+})
+
+// ? --- Размытие странички при открытии подменю
+window.addEventListener('load', () => {
+  if (window.innerWidth >= 1024) {
+    document.querySelector('#catalogue_link').addEventListener('mouseover', () => {
+      document.body.classList.add('body-cover');
+      disableBodyScroll(mobile_menu);
+
+      document.querySelector('.page-header').addEventListener('mouseleave', () => {
+        document.body.classList.remove('body-cover');
+        enableBodyScroll(mobile_menu);
       })
     })
   }

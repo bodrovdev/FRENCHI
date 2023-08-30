@@ -240,4 +240,145 @@
       }
     }
   }
+
+  &__description {
+
+    margin: 0 0 100px 0;
+
+    &-title {
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+
+      margin: 0 0 25px 0;
+    }
+
+    &-text {
+
+      & h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include mixins.respond-to(tabletOnly) {
+          font-size: 11px;
+        }
+
+        @include mixins.respond-to(mobileOnly) {
+          font-size: 16px;
+        }
+      }
+
+      & p,
+      span,
+      li,
+      a {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 131%;
+
+        transition: color 0.2s;
+
+        padding: 0;
+        margin: 0;
+
+        @include mixins.respond-to(tabletOnly) {
+          font-size: 11px;
+        }
+
+        @include mixins.respond-to(mobileOnly) {
+          font-size: 16px;
+        }
+      }
+
+      & a:hover {
+        color: #3D7829;
+
+        transition: color 0.2s;
+      }
+
+      & ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      & img {
+        object-fit: cover;
+
+        padding: 0;
+        margin: 0;
+
+        @include mixins.respond-to(notDesktop) {
+          max-width: 100%;
+        }
+      }
+
+      & div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+
+        @include mixins.respond-to(mobileOnly) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 26px;
+
+    &-images {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 55px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+
+      width: 220px;
+      height: auto;
+    }
+
+    &-img {
+      object-fit: contain !important;
+    }
+
+    &-caption {
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 131%;
+    }
+  }
 }

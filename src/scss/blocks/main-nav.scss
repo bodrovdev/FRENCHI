@@ -183,6 +183,16 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+    }
+
+    &-partials-wrapper {
+      width: 100%;
+      height: fit-content;
+      background-color: #FFF;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       gap: 100px;
 
       @include mixins.respond-to(notDesktop) {
@@ -525,6 +535,7 @@
     background-color: #351C1C;
 
     transform: translateX(-50%);
+    transition: opacity 0.3s;
 
     z-index: 5;
   }
