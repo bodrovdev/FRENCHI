@@ -177,7 +177,7 @@ let index_catalogue_slider_second_4 = new Swiper(".catalogue-goods__slider--4", 
   },
 });
 
-// ! --- Слайдер на странице отдельного товара
+// ! --- Слайдеры на странице отдельного товара
 let single_goods_slider_thumb = new Swiper(".single-goods__heading-slider-thumb", {
   direction: "vertical",
   slidesPerView: 4,
@@ -221,6 +221,28 @@ let single_goods_reviews_slider = new Swiper(".single-goods__reviews-slider", {
   navigation: {
     nextEl: ".single-goods__reviews-slider-button--next",
     prevEl: ".single-goods__reviews-slider-button--prev",
+  },
+});
+
+let single_goods_comp_slider = new Swiper(".single-goods__comp-slider", {
+  direction: "horizontal",
+  slidesPerView: "auto",
+
+  breakpoints: {
+    320: {
+      spaceBetween: 15,
+    },
+    768: {
+      spaceBetween: 30,
+    },
+    1024: {
+      spaceBetween: 43,
+    }
+  },
+
+  navigation: {
+    prevEl: ".single-goods__comp-slider-nav-arrow--prev",
+    nextEl: ".single-goods__comp-slider-nav-arrow--next",
   },
 });
 
