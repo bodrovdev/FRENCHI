@@ -42,24 +42,24 @@ window.addEventListener('load', () => {
   watchBlurElement(document.querySelector('.main-nav__catalogue'));
 })
 
-// ? --- Табы на главной странице
+// ? --- Табы
 window.addEventListener('load', () => {
-  if (document.querySelector('.index-catalogue-goods__tabs-button') === null) {
+  if (document.querySelector('.catalogue-goods__tabs-button') === null) {
     return;
   }
   else {
-    let index_tabs_buttons = document.querySelector('.index-catalogue-goods__tabs-controls');
-    let index_tabs_items = document.querySelectorAll('.index-catalogue-goods__slider-container');
+    let goods_tabs_buttons = document.querySelector('.catalogue-goods__tabs-controls');
+    let goods_tabs_items = document.querySelectorAll('.catalogue-goods__slider-container');
 
-    index_tabs_buttons.addEventListener('click', (e) => {
+    goods_tabs_buttons.addEventListener('click', (e) => {
       if (e.target.tagName === 'BUTTON') {
-        index_tabs_items.forEach(slider => {
+        goods_tabs_items.forEach(slider => {
           if (e.target.dataset.tab === slider.dataset.tab) {
-            document.querySelectorAll('.index-catalogue-goods__tabs-button').forEach(button => button.classList.remove('index-catalogue-goods__tabs-button--active'));
-            e.target.classList.add('index-catalogue-goods__tabs-button--active');
+            document.querySelectorAll('.catalogue-goods__tabs-button').forEach(button => button.classList.remove('catalogue-goods__tabs-button--active'));
+            e.target.classList.add('catalogue-goods__tabs-button--active');
 
-            index_tabs_items.forEach(slider_item => { slider_item.classList.remove('index-catalogue-goods__slider-container--active') });
-            slider.classList.add('index-catalogue-goods__slider-container--active');
+            goods_tabs_items.forEach(slider_item => { slider_item.classList.remove('catalogue-goods__slider-container--active') });
+            slider.classList.add('catalogue-goods__slider-container--active');
           }
         })
       }

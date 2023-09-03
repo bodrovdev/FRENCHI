@@ -179,11 +179,20 @@ let index_catalogue_slider_second_4 = new Swiper(".catalogue-goods__slider--4", 
 
 // ! --- Слайдеры на странице отдельного товара
 let single_goods_slider_thumb = new Swiper(".single-goods__heading-slider-thumb", {
-  direction: "vertical",
   slidesPerView: 4,
-  spaceBetween: 16,
   freeMode: true,
   watchSlidesProgress: true,
+
+  breakpoints: {
+    320: {
+      direction: "horizontal",
+      spaceBetween: 13,
+    },
+    767: {
+      direction: "vertical",
+      spaceBetween: 16,
+    },
+  },
 });
 
 let single_goods_slider = new Swiper(".single-goods__heading-slider", {

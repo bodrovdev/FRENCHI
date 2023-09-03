@@ -12,6 +12,8 @@
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       gap: 37px;
+
+      margin: 40px 0 50px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -28,10 +30,17 @@
 
       @include mixins.respond-to(mobileOnly) {
         flex-direction: column;
+        gap: 13px;
+
+        width: 100%;
       }
 
       &-wrapper {
         position: relative;
+
+        @include mixins.respond-to(mobileOnly) {
+          width: 100%;
+        }
       }
     }
 
@@ -43,7 +52,10 @@
       width: 524px;
       height: 551px;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        width: 100%;
+        height: 355px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         width: 312px;
@@ -59,6 +71,16 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        &-img {
+          @include mixins.respond-to(mobileOnly) {
+            width: 100%;
+            max-width: 163px;
+            height: auto;
+            max-height: 227px;
+            object-fit: cover;
+          }
         }
       }
 
@@ -104,7 +126,10 @@
         width: 125px;
         height: 551px;
 
-        @include mixins.respond-to(mobileOnly) {}
+        @include mixins.respond-to(mobileOnly) {
+          width: 100%;
+          height: 75px;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           width: 75px;
@@ -119,6 +144,11 @@
           width: 125px;
           height: 125px;
           background: url('../img/image/single-goods-slider-background.png');
+
+          @include mixins.respond-to(mobileOnly) {
+            width: 75px;
+            height: 75px;
+          }
 
           @include mixins.respond-to(tabletOnly) {
             width: 75px;
@@ -158,7 +188,9 @@
 
         margin: 0 0 33px 0;
 
-        @include mixins.respond-to(mobileOnly) {}
+        @include mixins.respond-to(mobileOnly) {
+          display: none;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           gap: 18px;
@@ -213,7 +245,11 @@
 
         margin: 0 0 36px 0;
 
-        @include mixins.respond-to(mobileOnly) {}
+        @include mixins.respond-to(mobileOnly) {
+          font-size: 18px;
+
+          margin: 0 0 21px 0;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           font-size: 20px;
@@ -233,7 +269,11 @@
 
         margin: 0 0 36px 0;
 
-        @include mixins.respond-to(mobileOnly) {}
+        @include mixins.respond-to(mobileOnly) {
+          font-size: 16px;
+
+          margin: 0 0 30px 0;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           font-size: 11px;
@@ -267,7 +307,7 @@
 
           &--active {
             & .single-goods__heading-info-spread-item-icon {
-              transform: scaleX(-1) rotate(-90deg);
+              transform: scaleX(-1) rotate(-90deg) !important;
               transition: transform 0.3s;
             }
           }
@@ -345,7 +385,9 @@
 
             padding: 0 0 13px 0;
 
-            @include mixins.respond-to(mobileOnly) {}
+            @include mixins.respond-to(mobileOnly) {
+              font-size: 16px;
+            }
 
             @include mixins.respond-to(tabletOnly) {
               font-size: 14px;
@@ -359,7 +401,9 @@
   &__description {
     margin: 0 0 100px 0;
 
-    @include mixins.respond-to(mobileOnly) {}
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 39px 0;
+    }
 
     @include mixins.respond-to(tabletOnly) {
       margin: 0 0 40px 0;
@@ -375,7 +419,9 @@
 
       margin: 0 0 25px 0;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         font-size: 11px;
@@ -472,6 +518,10 @@
     align-items: flex-end;
     justify-content: space-between;
 
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+
     &-images {
       display: flex;
       align-items: center;
@@ -480,18 +530,34 @@
 
       padding: 0 0 50px 0;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        justify-content: space-between;
+        order: 2;
+        gap: 19px;
+
+        width: 100%;
+
+        padding: 0;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         gap: 30px;
 
         padding: 0 0 30px 0;
       }
+    }
 
-      &-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mixins.respond-to(mobileOnly) {
+        width: 49%;
+
+        &:nth-child(3) {
+          display: none;
+        }
       }
     }
 
@@ -505,7 +571,11 @@
       width: 220px;
       height: auto;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        gap: 12px;
+
+        width: 100%;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         gap: 35px;
@@ -515,7 +585,11 @@
     }
 
     &-img {
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         width: 69px;
@@ -530,7 +604,9 @@
       font-weight: 400;
       line-height: 131%;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 12px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         font-size: 9px;
@@ -538,13 +614,20 @@
     }
 
     &-video {
-
       &-container {
         position: relative;
 
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mixins.respond-to(mobileOnly) {
+          order: 1;
+
+          width: 100%;
+
+          margin: 0 0 20px 0;
+        }
 
         &:hover {
           & .single-goods__media-video-play {
@@ -556,7 +639,12 @@
       }
 
       &-preview {
-        @include mixins.respond-to(mobileOnly) {}
+        object-fit: cover;
+
+        @include mixins.respond-to(mobileOnly) {
+          width: 100%;
+          height: 200px;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           width: 245px;
@@ -599,7 +687,9 @@
   &__reviews {
     margin: 100px 0 0 0;
 
-    @include mixins.respond-to(mobileOnly) {}
+    @include mixins.respond-to(mobileOnly) {
+      margin: 77px 0 0 0;
+    }
 
     @include mixins.respond-to(tabletOnly) {
       margin: 40px 0 0 0;
@@ -615,6 +705,12 @@
 
       margin: 0 0 30px 0;
 
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+
+        margin: 0 0 25px 0;
+      }
+
       @include mixins.respond-to(tabletOnly) {
         font-size: 11px;
 
@@ -629,6 +725,10 @@
         position: relative;
 
         padding: 0 36px;
+
+        @include mixins.respond-to(mobileOnly) {
+          padding: 0 27px;
+        }
       }
 
       &-slide {
@@ -644,7 +744,9 @@
 
         padding: 20px 20px 20px 15px;
 
-        @include mixins.respond-to(mobileOnly) {}
+        @include mixins.respond-to(mobileOnly) {
+          gap: 25px;
+        }
 
         @include mixins.respond-to(tabletOnly) {
           gap: 11px;
@@ -655,16 +757,24 @@
           align-items: center;
           gap: 20px;
 
-          @include mixins.respond-to(mobileOnly) {}
+          @include mixins.respond-to(mobileOnly) {
+            justify-content: space-between;
+            gap: 10px;
+
+            width: 100%;
+          }
 
           @include mixins.respond-to(tabletOnly) {
-            gap: 11px;
+            gap: 10px;
           }
 
           &-stars {
             flex-shrink: 0;
 
-            @include mixins.respond-to(mobileOnly) {}
+            @include mixins.respond-to(mobileOnly) {
+              width: 137px;
+              height: 23px;
+            }
 
             @include mixins.respond-to(tabletOnly) {
               width: 98px;
@@ -673,6 +783,8 @@
           }
 
           &-name {
+            flex-shrink: 0;
+
             color: #777;
             font-size: 12px;
             font-style: normal;
@@ -695,7 +807,9 @@
           font-weight: 400;
           line-height: 131%;
 
-          @include mixins.respond-to(mobileOnly) {}
+          @include mixins.respond-to(mobileOnly) {
+            font-size: 14px;
+          }
 
           @include mixins.respond-to(tabletOnly) {
             font-size: 9px;
@@ -743,13 +857,28 @@
 
         transform: translateY(-50%);
       }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+          @include mixins.respond-to(mobileOnly) {
+            width: 13px;
+            height: 26px;
+          }
+        }
+      }
     }
   }
 
   &__places {
     margin: 100px 0 0 0;
 
-    @include mixins.respond-to(mobileOnly) {}
+    @include mixins.respond-to(mobileOnly) {
+      margin: 73px 0 0 0;
+    }
 
     @include mixins.respond-to(tabletOnly) {
       margin: 40px 0 0 0;
@@ -765,7 +894,11 @@
 
       margin: 0 0 30px 0;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+
+        margin: 0 0 25px 0;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         font-size: 11px;
@@ -781,7 +914,10 @@
       justify-content: flex-start;
       gap: 21px;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        justify-content: center;
+        gap: 10px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         justify-content: center;
@@ -790,10 +926,15 @@
     }
 
     &-image {
+      flex-shrink: 0;
+
       width: 233px;
       height: 111px;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        width: 107px;
+        height: 50px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         width: 131px;
@@ -804,13 +945,16 @@
     &-img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
   &__comp {
     margin: 100px 0 150px 0;
 
-    @include mixins.respond-to(mobileOnly) {}
+    @include mixins.respond-to(mobileOnly) {
+      margin: 73px 0;
+    }
 
     @include mixins.respond-to(tabletOnly) {
       margin: 40px 0 56px 0;
@@ -826,7 +970,9 @@
 
       margin: 0 0 30px 0;
 
-      @include mixins.respond-to(mobileOnly) {}
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+      }
 
       @include mixins.respond-to(tabletOnly) {
         font-size: 11px;
@@ -875,7 +1021,9 @@
 
           margin: 0 0 26px 0;
 
-          @include mixins.respond-to(mobileOnly) {}
+          @include mixins.respond-to(mobileOnly) {
+            margin: 0 0 24px 0;
+          }
 
           @include mixins.respond-to(tabletOnly) {
             width: 90px;
@@ -897,7 +1045,9 @@
 
           margin: 0 0 18px 0;
 
-          @include mixins.respond-to(mobileOnly) {}
+          @include mixins.respond-to(mobileOnly) {
+            font-size: 14px;
+          }
 
           @include mixins.respond-to(tabletOnly) {
             font-size: 9px;
