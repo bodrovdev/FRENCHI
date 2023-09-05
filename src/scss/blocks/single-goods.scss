@@ -357,13 +357,11 @@
 
           &-name {
             color: #000;
-            font-family: Source Sans 3;
+            font-family: 'Source Sans 3', sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-
-            @include mixins.respond-to(mobileOnly) {}
 
             @include mixins.respond-to(tabletOnly) {
               font-size: 12px;
@@ -374,7 +372,7 @@
             display: inline-block;
 
             color: #000;
-            font-size: 18px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 131.023%;
@@ -386,11 +384,7 @@
             padding: 0 0 13px 0;
 
             @include mixins.respond-to(mobileOnly) {
-              font-size: 16px;
-            }
-
-            @include mixins.respond-to(tabletOnly) {
-              font-size: 14px;
+              font-size: 9px;
             }
           }
         }

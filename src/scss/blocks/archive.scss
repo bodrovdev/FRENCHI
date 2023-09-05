@@ -176,8 +176,16 @@
 
   margin: 0 auto;
 
+  & .prev {
+    display: none;
+  }
+
+  & .next {
+    display: none;
+  }
+
   & .screen-reader-text {
-    display: none
+    display: none;
   }
 
   & .nav-links {
