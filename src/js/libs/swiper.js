@@ -4,11 +4,11 @@ import Swiper from 'swiper/bundle';
 let heading_slider = new Swiper(".heading__slider", {
   direction: "horizontal",
   slidesPerView: 1,
-  speed: 700,
+  speed: 1300,
   loop: true,
 
   autoplay: {
-    delay: 3000,
+    delay: 2500,
     disableOnInteraction: false,
   },
 
@@ -239,14 +239,20 @@ let single_goods_comp_slider = new Swiper(".single-goods__comp-slider", {
 
   breakpoints: {
     320: {
-      spaceBetween: 15,
-    },
-    768: {
+      initialSlide: 1,
+      centeredSlides: true,
       spaceBetween: 30,
     },
-    1024: {
+    767: {
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 16,
+    },
+    1023: {
+      initialSlide: 0,
+      centeredSlides: false,
       spaceBetween: 43,
-    }
+    },
   },
 
   navigation: {

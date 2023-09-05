@@ -2,6 +2,7 @@
 
 .bread {
   width: 100%;
+  margin: 0 0 10px 0;
 
   @include mixins.respond-to(mobileOnly) {
     display: none;

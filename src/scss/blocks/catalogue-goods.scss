@@ -227,12 +227,18 @@
     }
 
     &-img {
-      object-fit: cover;
+      max-width: 208px;
       height: auto;
+      max-height: 224px;
+      object-fit: cover;
 
       margin: 0 0 20px 0;
 
       @include mixins.respond-to(mobileOnly) {
+        max-width: 67px;
+        height: auto;
+        max-height: 180px;
+
         margin: 0 0 27px 0;
       }
 

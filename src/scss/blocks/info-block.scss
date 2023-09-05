@@ -112,6 +112,8 @@
     &-link {
       display: flex;
 
+      font-size: 14px !important;
+
       &--mobile {
         display: none;
       }
@@ -121,8 +123,6 @@
 
         width: 100%;
         max-width: none !important;
-
-        font-size: 14px !important;
 
         &--mobile {
           display: flex;

@@ -49,42 +49,52 @@
     flex-shrink: 0;
 
     width: 388px;
-    min-height: 634px;
+    height: 634px;
 
     @include mixins.respond-to(mobileOnly) {
       align-items: center;
       justify-content: center;
 
       width: 168px;
-      min-height: 286px;
+      height: 286px;
     }
 
     @include mixins.respond-to(tabletOnly) {
       width: 209px;
-      min-height: 345px;
+      height: 345px;
     }
 
     &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 388px;
+      height: 634px;
       border-radius: 22px;
       box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25) inset;
 
       margin: 0 0 23px 0;
 
       @include mixins.respond-to(mobileOnly) {
+        width: 168px;
+        height: 286px;
+
         margin: 0 0 11px 0;
       }
 
       @include mixins.respond-to(tabletOnly) {
+        width: 209px;
+        height: 345px;
+
         margin: 0 0 19px 0;
       }
     }
 
     &-img {
-      @include mixins.respond-to(notDesktop) {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     &-title {

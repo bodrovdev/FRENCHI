@@ -114,6 +114,11 @@
     }
 
     &-img {
+      max-width: 154px;
+      height: auto;
+      max-height: 210px;
+      object-fit: cover;
+
       @include mixins.respond-to(mobileOnly) {
         max-width: 100px;
       }

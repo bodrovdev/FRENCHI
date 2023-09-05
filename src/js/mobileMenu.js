@@ -30,7 +30,7 @@ burger.addEventListener('click', () => {
 
 // ? - Изменение навигации при скролле страницы
 document.addEventListener('scroll', () => {
-  window.scrollY >= 100 ?
+  window.scrollY >= 1 ?
     page_header.classList.add('page-header--fixed') :
     page_header.classList.remove('page-header--fixed');
 })
