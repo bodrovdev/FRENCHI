@@ -11,7 +11,7 @@
   text-transform: uppercase;
 
   @include mixins.respond-to(mobileOnly) {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--font-family-second);
     font-size: 23px;
   }
 

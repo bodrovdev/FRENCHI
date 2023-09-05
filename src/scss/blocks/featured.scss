@@ -78,7 +78,7 @@
       line-height: normal;
 
       @include mixins.respond-to(mobileOnly) {
-        font-family: 'Source Sans 3', sans-serif;
+        font-family: var(--font-family-second);
         color: #000;
         font-size: 22px;
         font-style: normal;
@@ -87,7 +87,7 @@
       }
 
       @include mixins.respond-to(tabletOnly) {
-        font-family: 'Source Sans 3', sans-serif;
+        font-family: var(--font-family-second);
         color: #000;
         font-size: 20px;
         font-style: normal;
@@ -97,7 +97,7 @@
     }
 
     &-text {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--font-family-second);
       color: #000;
       font-size: 18px;
       font-style: normal;
