@@ -3,7 +3,7 @@
 .single-goods {
   &__heading {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
     gap: 27px;
 
@@ -769,7 +769,7 @@
           }
 
           &-stars {
-            flex-shrink: 0;
+            flex-shrink: 1;
 
             @include mixins.respond-to(mobileOnly) {
               width: 137px;
@@ -856,12 +856,21 @@
         pointer-events: none;
 
         transform: translateY(-50%);
+
+        & .swiper-button-disabled {
+          opacity: 0.2;
+
+          transition: opacity 0.2s;
+        }
       }
 
       &-button {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        user-select: all;
+        pointer-events: all;
 
         & svg {
           @include mixins.respond-to(mobileOnly) {
