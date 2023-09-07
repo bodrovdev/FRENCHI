@@ -42,6 +42,7 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
+      width: 60%;
       padding: 0 0 0 22px;
     }
 
@@ -137,6 +138,14 @@
     }
   }
 
+  @media (min-width:1024px) and (max-width:1279px) {
+    &__column {
+      flex-shrink: 0;
+
+      width: 50%;
+    }
+  }
+
   &__image {
     display: flex;
     flex-direction: column;
@@ -155,8 +164,16 @@
     @include mixins.respond-to(tabletOnly) {
       flex-shrink: 0;
 
-      width: fit-content;
-      height: fit-content;
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  @media (min-width:1024px) and (max-width:1279px) {
+    &__image {
+      flex-shrink: 0;
+
+      width: 50%;
     }
   }
 

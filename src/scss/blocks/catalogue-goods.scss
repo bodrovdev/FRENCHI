@@ -99,29 +99,24 @@
 
     @include mixins.respond-to(mobileOnly) {
       & .swiper-slide {
-        transform: scaleY(0.8);
+        transform: scale(0.8);
         transform-origin: center;
         transition: transform 0.4s;
       }
 
       & .swiper-slide-active {
-        transform: scaleY(1);
+        transform: scale(1);
         transform-origin: center;
         transition: transform 0.4s;
       }
     }
 
     @include mixins.respond-to(tabletOnly) {
-      max-width: 678px;
+      width: 94%;
     }
 
     @include mixins.respond-to(desktopS) {
-      width: 90%;
-    }
-
-    @include mixins.respond-to(desktopM) {
-      width: 100%;
-      max-width: 1268px;
+      width: 93%;
     }
 
     &-slide {
@@ -218,32 +213,31 @@
       }
 
       @include mixins.respond-to(tabletOnly) {
-        top: 5px;
-        right: 5px;
+        top: -15px;
+        right: -15px;
 
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
       }
     }
 
     &-img {
-      max-width: 208px;
-      height: auto;
-      max-height: 224px;
-      object-fit: cover;
+      width: 64px;
+      height: 171px;
+      object-fit: contain;
 
       margin: 0 0 20px 0;
 
       @include mixins.respond-to(mobileOnly) {
-        max-width: 67px;
-        height: auto;
-        max-height: 180px;
+        width: 67px;
+        height: 180px;
 
         margin: 0 0 27px 0;
       }
 
       @include mixins.respond-to(tabletOnly) {
-        max-width: 36px;
+        width: 36px;
+        height: 97px;
 
         margin: 0 0 17px 0;
       }

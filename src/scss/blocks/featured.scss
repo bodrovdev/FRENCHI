@@ -6,6 +6,7 @@
   margin: 100px 0 0 0;
 
   @include mixins.respond-to(mobileOnly) {
+    height: 1px;
     min-height: 519px;
 
     margin: 64px 0 0 0;
@@ -15,17 +16,24 @@
     margin: 58px 0 0 0;
   }
 
+  @include mixins.respond-to(desktopD) {
+    height: 1px;
+    min-height: 280px;
+  }
+
   &__container {
     position: relative;
 
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: space-between;
       gap: 6px;
 
       padding: 31px 0;
@@ -48,26 +56,15 @@
     justify-content: flex-start;
     gap: 21px;
 
-    max-width: 550px;
-
-    padding: 0 0 71px 0;
-    margin: 0 18px 0 0;
-
     @include mixins.respond-to(mobileOnly) {
       order: 1;
       gap: 7px;
-
-      padding: 0 0 0 7px;
-      margin: 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
       gap: 11px;
 
-      max-width: 270px;
-
-      padding: 34px 0 56px 0;
-      margin: 0;
+      max-width: 230px;
     }
 
     &-title {
@@ -122,35 +119,51 @@
     }
   }
 
-  &__image {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    @include mixins.respond-to(mobileOnly) {
-      left: -5%;
-
-      order: 2;
-
-      width: 110%;
-
-      margin: 0 auto;
+  @media (min-width: 1024px) and (max-width: 1511px) {
+    &__column {
+      max-width: 35%;
     }
   }
 
-  &__img {
-    @include mixins.respond-to(tabletOnly) {
-      width: 100%;
-      max-width: 345px;
-      height: 100%;
+  @media (min-width: 1512px) {
+    &__column {
+      max-width: 550px;
     }
   }
+
+  // &__image {
+  //   position: relative;
+
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   overflow: hidden;
+
+  //   @include mixins.respond-to(mobileOnly) {
+  //     left: -5%;
+
+  //     order: 2;
+
+  //     width: 110%;
+
+  //     margin: 0 auto;
+  //   }
+  // }
+
+  // &__img {
+  //   @include mixins.respond-to(tabletOnly) {
+  //     width: 100%;
+  //     max-width: 345px;
+  //     height: 100%;
+  //   }
+  // }
 
   &__link {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+
     flex-shrink: 0;
 
     color: #000;
@@ -159,9 +172,13 @@
     font-weight: 400;
     line-height: normal;
 
-    margin: 0 21px 26px 0;
+    transform: translateX(-50%);
 
     @include mixins.respond-to(mobileOnly) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+
       display: inline-block;
 
       align-self: center;
@@ -176,6 +193,8 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
+      bottom: 20px;
+
       display: inline-block;
 
       max-width: none !important;
@@ -183,7 +202,7 @@
       font-size: 9px !important;
 
       padding: 5px 34px !important;
-      margin: auto 0 16px 0;
+      margin: 0;
     }
   }
 

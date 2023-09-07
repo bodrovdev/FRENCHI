@@ -130,7 +130,7 @@
     }
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     & #catalogue_item {
       &:hover {
         & .main-nav__catalogue {
@@ -190,6 +190,10 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+
+      @include mixins.respond-to(notDesktop) {
+        width: 100% !important;
+      }
     }
 
     &-partials-wrapper {
@@ -221,6 +225,10 @@
       transition: opacity 0.3s;
 
       @include mixins.respond-to(mobileOnly) {
+        opacity: 1 !important;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
         opacity: 1 !important;
       }
     }
@@ -340,7 +348,7 @@
     align-items: center;
     justify-content: center;
 
-    user-select: all;
+    // user-select: all;
     pointer-events: all;
 
     // transition: transform 0.2s;
@@ -378,7 +386,7 @@
       right: 0;
 
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
 
       width: 70%;
@@ -391,7 +399,7 @@
       transform: translateX(100%);
       transition: transform 0.6s;
 
-      padding: 25px 20px;
+      padding: 100px 20px;
 
       &--active {
         transform: translateX(0);
@@ -418,7 +426,7 @@
     }
 
     &-item {
-      user-select: all;
+      // user-select: all;
       pointer-events: all;
 
       @include mixins.respond-to(notDesktop) {
@@ -429,7 +437,7 @@
     &-link {
       display: inline-block;
 
-      user-select: all;
+      // user-select: all;
       pointer-events: all;
 
       color: #000;
@@ -474,7 +482,7 @@
     cursor: pointer;
     outline: none;
     border: none;
-    user-select: all;
+    // user-select: all;
     pointer-events: all;
 
     z-index: 15;

@@ -172,7 +172,7 @@
     }
 
     &-link {
-      border: 2px solid black !important;
+      border: 2px solid black;
 
       @include mixins.respond-to(mobileOnly) {
         max-width: none !important;
