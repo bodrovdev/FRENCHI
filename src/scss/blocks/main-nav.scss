@@ -219,6 +219,10 @@
       opacity: 0;
 
       transition: opacity 0.3s;
+
+      @include mixins.respond-to(mobileOnly) {
+        opacity: 1 !important;
+      }
     }
 
     &-list {
