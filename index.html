@@ -309,6 +309,32 @@
   </section>
 
   <section class="featured">
+    <style>
+      @media (min-width:320px) and (max-width:767px) {
+        .featured {
+          background-image: url('img/image/featured1-bg.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      @media (min-width:767px) and (max-width:1279px) {
+        .featured {
+          background-image: url('img/image/featured2-bg.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      @media (min-width:1280px) {
+        .featured {
+          background-image: url('img/image/featured3-bg.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    </style>
+
     <div class="featured__container base-container">
       <div class="featured__column">
         <h2 class="featured__column-title base-title">Укрепитель ультра плюс</h2>
@@ -317,12 +343,12 @@
         </p>
       </div>
       <a class="featured__link page-link base-link" href="#">Узнать подробнее</a>
-      <figure class="featured__image base-figure">
+      <!-- <figure class="featured__image base-figure">
         <img class="featured__img" src="img/image/featured-img.png" alt="#">
         <svg class="featured__new-icon" width="110" height="110" alt="Логотип">
           <use href="img/icon/sprite.svg#new-icon"></use>
         </svg>
-      </figure>
+      </figure> -->
     </div>
   </section>
 
