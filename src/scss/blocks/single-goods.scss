@@ -74,12 +74,20 @@
         }
 
         &-img {
+          width: 255px;
+          height: 352px;
+          object-fit: contain;
+
           @include mixins.respond-to(mobileOnly) {
-            width: 100%;
             max-width: 163px;
             height: auto;
             max-height: 227px;
-            object-fit: cover;
+          }
+
+          @include mixins.respond-to(tabletOnly) {
+            max-width: 151px;
+            height: auto;
+            max-height: 210px;
           }
         }
       }
