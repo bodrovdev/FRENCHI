@@ -31,7 +31,7 @@
       align-self: center;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
+      gap: 21px;
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -60,7 +60,7 @@
     }
 
     @include mixins.respond-to(mobileOnly) {
-      font-size: 14px;
+      font-size: 11px;
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -72,7 +72,7 @@
     margin: 0 0 66px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 16px 0;
+      margin: 0 0 40px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -116,7 +116,7 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      width: 93%;
+      width: 96%;
     }
 
     &-slide {
@@ -157,15 +157,18 @@
     &-nav {
       position: absolute;
       bottom: 115px;
+      left: 50%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      width: 100%;
+      width: 102%;
       height: fit-content;
       user-select: none;
       pointer-events: none;
+
+      transform: translateX(-50%);
 
       z-index: 9;
 
@@ -204,14 +207,6 @@
       width: 81px;
       height: 81px;
 
-      @include mixins.respond-to(mobileOnly) {
-        top: 5px;
-        right: 5px;
-
-        width: 40px;
-        height: 40px;
-      }
-
       @include mixins.respond-to(tabletOnly) {
         top: -15px;
         right: -15px;
@@ -244,31 +239,21 @@
     }
 
     &-title {
+      font-size: 12px;
+      font-weight: 400;
       color: #000;
       text-align: center;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
 
       margin: 0 0 20px 0;
 
       @include mixins.respond-to(mobileOnly) {
-        color: #000;
-        text-align: center;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+
+        margin: 0;
       }
 
       @include mixins.respond-to(tabletOnly) {
-        color: #000;
-        text-align: center;
         font-size: 9px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
 
         margin: 0 0 9px 0;
       }
@@ -300,6 +285,10 @@
         font-weight: 600;
         line-height: normal;
         text-decoration-line: underline;
+      }
+
+      @include mixins.respond-to(mobileOnly) {
+        display: none;
       }
     }
   }

@@ -56,7 +56,7 @@ let index_catalogue_slider_second_1 = new Swiper(".catalogue-goods__slider--1", 
     320: {
       initialSlide: 1,
       centeredSlides: true,
-      spaceBetween: 15,
+      spaceBetween: 0,
     },
     767: {
       initialSlide: 0,
@@ -88,7 +88,7 @@ let index_catalogue_slider_second_2 = new Swiper(".catalogue-goods__slider--2", 
     320: {
       initialSlide: 1,
       centeredSlides: true,
-      spaceBetween: 15,
+      spaceBetween: 0,
     },
     767: {
       initialSlide: 0,
@@ -120,7 +120,7 @@ let index_catalogue_slider_second_3 = new Swiper(".catalogue-goods__slider--3", 
     320: {
       initialSlide: 1,
       centeredSlides: true,
-      spaceBetween: 15,
+      spaceBetween: 0,
     },
     767: {
       initialSlide: 0,
@@ -152,7 +152,7 @@ let index_catalogue_slider_second_4 = new Swiper(".catalogue-goods__slider--4", 
     320: {
       initialSlide: 1,
       centeredSlides: true,
-      spaceBetween: 15,
+      spaceBetween: 0,
     },
     767: {
       initialSlide: 0,
@@ -211,19 +211,22 @@ let single_goods_slider = new Swiper(".single-goods__heading-slider", {
 
 let single_goods_reviews_slider = new Swiper(".single-goods__reviews-slider", {
   direction: "horizontal",
-  slidesPerView: 1,
 
   breakpoints: {
     320: {
-      slidesPerView: 1
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 3,
       spaceBetween: 18,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      initialSlide: 1,
     },
     1024: {
-      slidesPerView: 3,
       spaceBetween: 18,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      initialSlide: 1,
     }
   },
 

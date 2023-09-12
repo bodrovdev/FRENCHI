@@ -77,7 +77,7 @@ window.addEventListener('load', () => {
     catalogue.setAttribute('style', `width:${element.offsetWidth}px`)
   }
 
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1279) {
     document.getElementById('catalogue_link').removeAttribute('href');
     document.getElementById('catalogue_link').addEventListener('click', () => {
       catalogue.classList.toggle('main-nav__catalogue--active');
@@ -88,7 +88,7 @@ window.addEventListener('load', () => {
     document.addEventListener('resize', setCatalogueWith(mobile_menu));
   }
 
-  else if (window.innerWidth > 1024) {
+  else if (window.innerWidth > 1279) {
     setCatalogueWith(main_nav);
     document.addEventListener('resize', setCatalogueWith(main_nav));
   }
