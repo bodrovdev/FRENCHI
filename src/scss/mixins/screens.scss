@@ -6,6 +6,7 @@ $screens: (
 	tabletOnly: (min: 768px, max: 1023px),
 	notDesktop: (min:320px, max: 1023px),
 	notDesktopD: (min:320px, max: 1279px),
+	modernTabletOnly: (min:768px, max: 1279px),
 	desktopS: (min: 1024px, ),
 	onlyDesktopS: (min: 1024px, max: 1279px),
 	desktopD: (min: 1280px),

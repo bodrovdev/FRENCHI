@@ -16,7 +16,7 @@
       margin: 40px 0 50px 0;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       gap: 30px;
 
       margin: 25px 0 40px 0;
@@ -57,7 +57,7 @@
         height: 355px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 312px;
         height: 328px;
       }
@@ -84,7 +84,7 @@
             max-height: 227px;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             max-width: 151px;
             height: auto;
             max-height: 210px;
@@ -114,7 +114,7 @@
 
         @include mixins.respond-to(mobileOnly) {}
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           padding: 0 12px;
         }
 
@@ -139,7 +139,7 @@
           height: 75px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           width: 75px;
           height: 328px;
         }
@@ -158,7 +158,7 @@
             height: 75px;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             width: 75px;
             height: 75px;
           }
@@ -216,7 +216,7 @@
           display: none;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           gap: 18px;
 
           margin: 0 0 20px 0;
@@ -250,7 +250,7 @@
 
           @include mixins.respond-to(mobileOnly) {}
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             font-size: 9px;
 
             padding: 0 0 0 6px;
@@ -275,7 +275,7 @@
           margin: 0 0 21px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 20px;
 
           margin: 0 0 20px 0;
@@ -301,7 +301,7 @@
           margin: 0 0 30px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
         }
       }
@@ -376,7 +376,7 @@
 
             @include mixins.respond-to(mobileOnly) {}
 
-            // @include mixins.respond-to(tabletOnly) {
+            // @include mixins.respond-to(modernTabletOnly) {
             //   padding: 10px 5px 7px 0;
             // }
           }
@@ -389,7 +389,7 @@
             font-weight: 600;
             line-height: normal;
 
-            @include mixins.respond-to(tabletOnly) {
+            @include mixins.respond-to(modernTabletOnly) {
               font-size: 12px;
             }
           }
@@ -425,7 +425,7 @@
       margin: 0 0 39px 0;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       margin: 0 0 40px 0;
     }
 
@@ -443,7 +443,7 @@
         font-size: 16px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 11px;
 
         margin: 0 0 10px 0;
@@ -465,7 +465,7 @@
         line-height: normal;
         text-transform: uppercase;
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
         }
 
@@ -489,7 +489,7 @@
         padding: 0;
         margin: 0;
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
         }
 
@@ -561,7 +561,7 @@
         padding: 0;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         gap: 30px;
 
         padding: 0 0 30px 0;
@@ -598,7 +598,7 @@
         width: 100%;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         gap: 35px;
 
         width: 122px;
@@ -612,7 +612,7 @@
         object-fit: cover;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 69px;
         height: 78px;
       }
@@ -629,7 +629,7 @@
         font-size: 12px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 9px;
       }
     }
@@ -648,22 +648,28 @@
         height: auto;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 245px;
         height: 192px;
       }
     }
 
-    @media (min-width:1024px) and (max-width:1279px) {
-      .single-goods__media-image {
-        width: 122px;
-      }
+    // @media (min-width:1024px) and (max-width:1279px) {
+    //   .single-goods__media-image {
+    //     gap: 35px;
 
-      .single-goods__media-video-container {
-        max-width: 245px;
-        width: 100%;
-      }
-    }
+    //     width: 122px;
+    //   }
+
+    //   .single-goods__media-caption {
+    //     font-size: 9px;
+    //   }
+
+    //   .single-goods__media-video-container {
+    //     width: 245px;
+    //     height: 192px;
+    //   }
+    // }
 
     &-video {
       width: 100%;
@@ -679,7 +685,7 @@
       margin: 77px 0 0 0;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       margin: 40px 0 0 0;
     }
 
@@ -699,7 +705,7 @@
         margin: 0 0 25px 0;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 11px;
 
         margin: 0 0 15px 0;
@@ -917,7 +923,7 @@
       margin: 73px 0 0 0;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       margin: 40px 0 0 0;
     }
 
@@ -937,7 +943,7 @@
         margin: 0 0 25px 0;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 11px;
 
         margin: 0 0 16px 0;
@@ -956,7 +962,7 @@
         gap: 10px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         justify-content: center;
         gap: 12px;
       }
@@ -973,7 +979,7 @@
         height: 50px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 131px;
         height: 62px;
       }
@@ -993,7 +999,7 @@
       margin: 73px 0;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       margin: 40px 0 56px 0;
     }
 
@@ -1011,7 +1017,7 @@
         font-size: 16px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 11px;
 
         margin: 0 0 16px 0;
@@ -1058,7 +1064,7 @@
 
         @include mixins.respond-to(mobileOnly) {}
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           width: 153px;
           min-height: 221px;
 
@@ -1081,7 +1087,7 @@
             margin: 0 0 24px 0;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             max-width: 56px;
             height: auto;
             max-height: 118px;
@@ -1106,7 +1112,7 @@
             font-size: 14px;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             font-size: 9px;
 
             margin: 0 0 14px 0;
@@ -1145,7 +1151,7 @@
 
           @include mixins.respond-to(mobileOnly) {}
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             width: 105px;
             height: 18px;
 
@@ -1178,7 +1184,7 @@
       //     display: none;
       //   }
 
-      //   @include mixins.respond-to(tabletOnly) {
+      //   @include mixins.respond-to(modernTabletOnly) {
       //     bottom: 92px;
       //   }
 
