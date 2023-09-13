@@ -1,6 +1,17 @@
 @use "../mixins";
 
 .single-goods {
+
+  &__container {
+    @include mixins.respond-to(tabletOnly) {
+      width: 85%;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 83%;
+    }
+  }
+
   &__heading {
     display: flex;
     align-items: flex-start;
@@ -327,6 +338,10 @@
 
           transition: height 0.3s;
 
+          @include mixins.respond-to(tabletOnly) {
+            height: 30px;
+          }
+
           &:last-child {
             border-bottom: 1px solid black;
           }
@@ -376,9 +391,9 @@
 
             @include mixins.respond-to(mobileOnly) {}
 
-            // @include mixins.respond-to(modernTabletOnly) {
-            //   padding: 10px 5px 7px 0;
-            // }
+            @include mixins.respond-to(modernTabletOnly) {
+              padding: 10px 5px 7px 0;
+            }
           }
 
           &-name {
@@ -390,7 +405,19 @@
             line-height: normal;
 
             @include mixins.respond-to(modernTabletOnly) {
-              font-size: 12px;
+              font-size: 9px;
+            }
+          }
+
+          &-icon {
+            @include mixins.respond-to(mobileOnly) {
+              width: 7px;
+              height: 13px;
+            }
+
+            @include mixins.respond-to(tabletOnly) {
+              width: 4px;
+              height: 8px;
             }
           }
 

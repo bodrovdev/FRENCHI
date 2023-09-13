@@ -16,6 +16,7 @@
   }
 
   @include mixins.respond-to(tabletOnly) {
+    padding: 40px 0 20px 0;
     margin: 58px 0 0 0;
   }
 
@@ -164,7 +165,7 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
-      bottom: 20px;
+      bottom: 0;
 
       display: inline-block;
 
