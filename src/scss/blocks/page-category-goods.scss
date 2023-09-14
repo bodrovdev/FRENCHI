@@ -11,6 +11,12 @@
     &__container {
       display: flex;
       flex-direction: column;
+
+      width: 83% !important;
+
+      @include mixins.respond-to(modernTabletOnly) {
+        width: 84% !important;
+      }
     }
 
     &__title {
@@ -22,7 +28,7 @@
         margin: 0 auto 52px auto;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         margin: 0 auto 49px auto;
       }
     }
@@ -41,7 +47,7 @@
         gap: 20px 14px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         display: grid;
         grid-template-columns: repeat(4, 153px);
         grid-auto-flow: row;
@@ -73,7 +79,7 @@
         padding: 20px 10px 12px 10px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 153px;
         // height: 247px;
 
@@ -101,7 +107,7 @@
           margin: 0 0 20px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           margin: 0 0 30px 0;
         }
       }
@@ -117,7 +123,7 @@
           height: 149px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           width: 42px;
           height: 118px;
         }
@@ -140,7 +146,7 @@
           margin: 0 0 2px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
           font-weight: 500;
 
@@ -164,7 +170,7 @@
           margin: 0 0 14px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           margin: 0 0 16px 0;
         }
       }
@@ -201,7 +207,7 @@
           padding: 7px 49px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 9px;
 
           padding: 5px 34px;

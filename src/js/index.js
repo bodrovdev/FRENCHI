@@ -10,9 +10,9 @@ window.addEventListener('load', () => {
 })
 
 // ? --- Показать страницу только после загрузки
-window.addEventListener('load', () => {
-  document.body.removeAttribute('style');
-})
+// window.addEventListener('load', () => {
+//   document.body.removeAttribute('style');
+// })
 
 // ? --- Размытие странички при открытии подменю
 function watchBlurElement(element) {
@@ -137,6 +137,7 @@ window.addEventListener('load', () => {
   else {
     spread_items.forEach(item => {
       let item_content = item.querySelector('.single-goods__heading-info-spread-item-content');
+      let item_top = item.querySelector('.single-goods__heading-info-spread-item-top');
 
       item.addEventListener('click', () => {
         if (item.classList.contains('single-goods__heading-info-spread-item--active')) {
@@ -145,7 +146,7 @@ window.addEventListener('load', () => {
         }
         else {
           item.classList.add('single-goods__heading-info-spread-item--active');
-          item.setAttribute(`style`, `height:${item_content.offsetHeight + 62}px; transition:height 0.3s;`);
+          item.setAttribute(`style`, `height:${item_content.offsetHeight + item_top.offsetHeight}px; transition:height 0.3s;`);
         }
       })
     })

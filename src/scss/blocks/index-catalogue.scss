@@ -7,7 +7,7 @@
     margin: 63px 0 0 0;
   }
 
-  @include mixins.respond-to(tabletOnly) {
+  @include mixins.respond-to(modernTabletOnly) {
     margin: 84px 0 0 0;
   }
 
@@ -22,7 +22,7 @@
       gap: 24px;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       gap: 53px;
     }
   }
@@ -32,7 +32,7 @@
     max-width: 100%;
 
     &-wrapper {
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         display: grid;
         grid-template-columns: repeat(3, 208px);
         grid-auto-flow: row;
@@ -40,10 +40,10 @@
         gap: 40px 30px;
       }
 
-      @include mixins.respond-to(desktopS) {
+      @include mixins.respond-to(desktopD) {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         gap: 68px 60px;
       }
@@ -52,19 +52,16 @@
     &-slide {
       display: flex;
       flex-direction: column;
-      gap: 28px;
 
       width: 220px;
+      height: auto;
 
       @include mixins.respond-to(mobileOnly) {
         width: 155px;
-        gap: 20px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 208px;
-        height: 309px;
-        gap: 15px;
       }
     }
 
@@ -105,12 +102,14 @@
       height: 100%;
       background: url('../img/image/catalogue-item-bg.jpg');
       background-size: 220px 150px;
-      background-position: center;
+      background-position: 0 30px;
       background-repeat: no-repeat;
+
+      margin: 0 0 20px 0;
 
       @include mixins.respond-to(mobileOnly) {
         background-size: 150px 100px;
-        background-position: top;
+        // background-position: top;
       }
     }
 
@@ -124,27 +123,9 @@
         height: 145px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         width: 145px;
         height: 180px;
-      }
-    }
-
-    &-bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-
-      text-align: center;
-
-      @include mixins.respond-to(mobileOnly) {
-        gap: 10px;
-      }
-
-      @include mixins.respond-to(tabletOnly) {
-        gap: 11px;
       }
     }
 
@@ -156,12 +137,34 @@
       font-weight: 600;
       line-height: normal;
 
+      margin: 0 0 15px 0;
+
       @include mixins.respond-to(mobileOnly) {
         font-size: 14px;
+
+        margin: 0 0 14px 0;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 13px;
+
+        margin: 0 0 12px 0;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      margin: auto 0 0 0;
+
+      @include mixins.respond-to(mobileOnly) {
+        gap: 10px;
+      }
+
+      @include mixins.respond-to(modernTabletOnly) {
+        gap: 10px;
       }
     }
 
@@ -177,7 +180,7 @@
         font-size: 11px;
       }
 
-      @include mixins.respond-to(tabletOnly) {
+      @include mixins.respond-to(modernTabletOnly) {
         font-size: 11px;
       }
     }
@@ -227,7 +230,7 @@
       padding: 8px 85px !important;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(modernTabletOnly) {
       max-width: none !important;
 
       font-size: 9px !important;

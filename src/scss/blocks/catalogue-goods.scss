@@ -25,17 +25,17 @@
     width: 100%;
     max-width: 1268px;
 
-    margin: 0 auto 21px auto;
+    margin: 0 0 21px 0;
 
     @include mixins.respond-to(mobileOnly) {
       align-self: center;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 21px;
+      justify-content: flex-start;
+      gap: 24px !important;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      gap: 63px;
+      gap: 63px !important;
 
       padding: 0 0 0 24px;
 

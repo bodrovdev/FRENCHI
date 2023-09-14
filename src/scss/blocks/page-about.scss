@@ -9,7 +9,7 @@
     margin: 50px 0 75px 0;
   }
 
-  @include mixins.respond-to(tabletOnly) {
+  @include mixins.respond-to(modernTabletOnly) {
     margin: 20px 0 50px 0;
   }
 
@@ -20,8 +20,14 @@
     justify-content: flex-start;
     gap: 90px;
 
+    width: 83% !important;
+
     @include mixins.respond-to(mobileOnly) {
       gap: 85px;
+    }
+
+    @include mixins.respond-to(modernTabletOnly) {
+      width: 85% !important;
     }
   }
 
@@ -62,7 +68,7 @@
         line-height: normal;
         white-space: nowrap;
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
           font-weight: 600;
         }
@@ -76,7 +82,7 @@
           max-width: 100%;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           max-width: 526px;
         }
       }
@@ -100,7 +106,7 @@
           margin: 0 0 30px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 20px;
           font-weight: 500;
         }
@@ -114,7 +120,7 @@
         font-weight: 400;
         line-height: normal;
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
         }
       }
@@ -125,30 +131,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 40px;
     }
-
-    @include mixins.respond-to(tabletOnly) {}
 
     &-column {
       &--left {
         display: flex;
         flex-direction: column;
         gap: 14px;
+        flex-shrink: 0;
 
         @include mixins.respond-to(mobileOnly) {
           align-items: center;
           justify-content: center;
           gap: 25px;
         }
-
-        @include mixins.respond-to(tabletOnly) {}
       }
 
       &-text {
@@ -170,7 +172,7 @@
           font-size: 18px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           max-width: 280px;
 
           font-size: 16px;
@@ -195,7 +197,7 @@
             left: -23px;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             top: -20px;
             left: -35px;
 
@@ -223,7 +225,7 @@
             right: -20px;
           }
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             bottom: -40px;
             right: -25px;
 
@@ -232,17 +234,17 @@
         }
       }
 
-      @media (min-width:1024px) and (max-width:1319px) {
-        &-text {
-          &::before {
-            display: none;
-          }
+      // @media (min-width:1024px) and (max-width:1319px) {
+      //   &-text {
+      //     &::before {
+      //       display: none;
+      //     }
 
-          &::after {
-            display: none;
-          }
-        }
-      }
+      //     &::after {
+      //       display: none;
+      //     }
+      //   }
+      // }
 
       &-subtext {
         color: #000;
@@ -256,12 +258,14 @@
           font-size: 14px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
         }
       }
 
       &--right {
+        flex-shrink: 1;
+
         width: 608px;
         height: 336px;
         border-radius: 15px;
@@ -272,7 +276,7 @@
           height: 187px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           width: 339px;
           height: 187px;
         }
@@ -307,7 +311,7 @@
           display: none;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           gap: 13px 8px;
         }
       }
@@ -322,7 +326,7 @@
           width: 293px;
           height: 144px;
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             width: 173px;
             height: 85px;
           }
@@ -334,7 +338,7 @@
           width: 293px;
           height: 227px;
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             width: 173px;
             height: 134px;
           }
@@ -346,7 +350,7 @@
           width: 293px;
           height: 392px;
 
-          @include mixins.respond-to(tabletOnly) {
+          @include mixins.respond-to(modernTabletOnly) {
             width: 173px;
             height: 232px;
           }
@@ -377,7 +381,7 @@
           margin: 0 0 30px 0;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 20px;
           font-weight: 500;
         }
@@ -395,7 +399,7 @@
 
         margin: 0 0 50px 0;
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           font-size: 11px;
 
           margin: 0 0 24px 0;
@@ -415,18 +419,8 @@
           width: 100%;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           gap: 14px;
-        }
-
-        @include mixins.respond-to(desktopS) {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        @include mixins.respond-to(desktopD) {
-          flex-direction: row;
-          align-items: center;
         }
       }
 
@@ -452,7 +446,7 @@
           padding: 0 0 0 9px;
         }
 
-        @include mixins.respond-to(tabletOnly) {
+        @include mixins.respond-to(modernTabletOnly) {
           max-width: 200px;
 
           font-size: 11px;

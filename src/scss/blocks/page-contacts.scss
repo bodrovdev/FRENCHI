@@ -6,8 +6,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 78px;
+
+    width: 83% !important;
+
+    @include mixins.respond-to(modernTabletOnly) {
+      width: 84% !important;
+    }
 
     @include mixins.respond-to(notDesktop) {
       gap: 40px;
